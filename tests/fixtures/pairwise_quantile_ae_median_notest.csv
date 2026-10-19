@@ -1,0 +1,17 @@
+model,compare_against,mean_scores_ratio,pval,adj_pval,ae_median_relative_skill
+EuroCOVIDhub-baseline,epiforecasts-EpiNow2,1.3806808629516776,,,1.6013865929465785
+EuroCOVIDhub-baseline,UMass-MechBayes,2.9723245395719262,,,1.6013865929465785
+EuroCOVIDhub-baseline,EuroCOVIDhub-ensemble,1.6024896029353068,,,1.6013865929465785
+EuroCOVIDhub-baseline,EuroCOVIDhub-baseline,1,1,1,1.6013865929465785
+EuroCOVIDhub-ensemble,EuroCOVIDhub-baseline,0.6240290097160589,,,0.77681872542440022
+EuroCOVIDhub-ensemble,UMass-MechBayes,0.67705326032852164,,,0.77681872542440022
+EuroCOVIDhub-ensemble,epiforecasts-EpiNow2,0.8618885871269879,,,0.77681872542440022
+EuroCOVIDhub-ensemble,EuroCOVIDhub-ensemble,1,1,1,0.77681872542440022
+UMass-MechBayes,EuroCOVIDhub-ensemble,1.4769886781355683,,,0.770194558093937
+UMass-MechBayes,epiforecasts-EpiNow2,0.70814279983955075,,,0.770194558093937
+UMass-MechBayes,EuroCOVIDhub-baseline,0.33643701644505475,,,0.770194558093937
+UMass-MechBayes,UMass-MechBayes,1,1,1,0.770194558093937
+epiforecasts-EpiNow2,UMass-MechBayes,1.4121445564744535,,,1.0437192181011463
+epiforecasts-EpiNow2,EuroCOVIDhub-ensemble,1.1602427679584335,,,1.0437192181011463
+epiforecasts-EpiNow2,EuroCOVIDhub-baseline,0.72428033648714296,,,1.0437192181011463
+epiforecasts-EpiNow2,epiforecasts-EpiNow2,1,1,1,1.0437192181011463
