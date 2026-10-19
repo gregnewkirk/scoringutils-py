@@ -152,3 +152,27 @@ def scores_sample_discrete(fc_sample_discrete) -> su.Scores:
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         return su.score(fc_sample_discrete)
+
+
+@pytest.fixture(scope="session")
+def fc_point() -> su.ForecastPoint:
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        return su.as_forecast_point(su.example_point())
+
+
+@pytest.fixture(scope="session")
+def fc_binary() -> su.ForecastBinary:
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        return su.as_forecast_binary(su.example_binary())
+
+
+@pytest.fixture(scope="session")
+def scores_point(fc_point) -> su.Scores:
+    return su.score(fc_point)
+
+
+@pytest.fixture(scope="session")
+def scores_binary(fc_binary) -> su.Scores:
+    return su.score(fc_binary)

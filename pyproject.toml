@@ -1,7 +1,7 @@
 [project]
 name = "scoringutils-py"
-version = "0.1.0"
-description = "Unofficial Python port of the R package scoringutils for evaluating quantile and sample forecasts"
+version = "0.2.0"
+description = "Unofficial Python port of the R package scoringutils for evaluating quantile, sample, point and binary forecasts"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"

@@ -309,3 +309,138 @@ def test_get_duplicate_forecasts_counts():
         _with_duplicates(), type="quantile", counts=True
     )
     assert_frame_parity(result, read_fixture("duplicates_quantile_counts.csv"))
+
+
+# ---------------------------------------------------------------------------
+# point and binary forecasts
+# ---------------------------------------------------------------------------
+
+FU_POINT = [
+    "location",
+    "target_end_date",
+    "target_type",
+    "location_name",
+    "forecast_date",
+    "model",
+    "horizon",
+]
+FU_BINARY = FU_SAMPLE
+
+
+def test_example_point_matches_r():
+    point = su.example_point()
+    assert su.is_forecast_point(point)
+    assert list(point.columns) == [
+        "location",
+        "target_end_date",
+        "target_type",
+        "observed",
+        "location_name",
+        "forecast_date",
+        "predicted",
+        "model",
+        "horizon",
+    ]
+    assert len(point) == 1031
+
+
+def test_example_binary_matches_r():
+    binary = su.example_binary()
+    assert su.is_forecast_binary(binary)
+    assert isinstance(binary["observed"].dtype, pd.CategoricalDtype)
+    assert list(binary["observed"].cat.categories) == ["0", "1"]
+    assert len(binary) == 1031
+    assert binary["observed"].isna().sum() == 144
+
+
+def test_score_point(scores_point):
+    assert_frame_parity(scores_point, read_fixture("scores_point.csv"), FU_POINT)
+
+
+def test_score_binary(scores_binary):
+    assert_frame_parity(scores_binary, read_fixture("scores_binary.csv"), FU_BINARY)
+
+
+def test_quantile_to_point(fc_quantile):
+    q = quiet(su.as_forecast_quantile, pd.DataFrame(fc_quantile).dropna())
+    point = su.as_forecast_point(q)
+    assert su.is_forecast_point(point)
+    assert_frame_parity(point, read_fixture("quantile_to_point.csv"), FU)
+    assert_frame_parity(
+        su.score(point), read_fixture("scores_quantile_to_point.csv"), FU
+    )
+
+
+def test_summarise_point_by_model_and_target(scores_point):
+    assert_frame_parity(
+        su.summarise_scores(scores_point, by=["model", "target_type"]),
+        read_fixture("summarise_point_model_target.csv"),
+        ["model", "target_type"],
+    )
+
+
+@pytest.mark.parametrize(
+    ("by", "fixture"),
+    [
+        ("model", "summarise_binary_model.csv"),
+        (["model", "target_type"], "summarise_binary_model_target.csv"),
+    ],
+)
+def test_summarise_binary(scores_binary, by, fixture):
+    keys = [by] if isinstance(by, str) else by
+    assert_frame_parity(
+        su.summarise_scores(scores_binary, by=by), read_fixture(fixture), keys
+    )
+
+
+def test_pairwise_binary_default_metric_is_brier(scores_binary):
+    assert_frame_parity(
+        su.get_pairwise_comparisons(scores_binary),
+        read_fixture("pairwise_binary.csv"),
+        PAIR_KEYS,
+    )
+
+
+def test_pairwise_point_ae_by_target(scores_point):
+    result = su.get_pairwise_comparisons(
+        scores_point, metric="ae_point", by="target_type"
+    )
+    assert_frame_parity(
+        result,
+        read_fixture("pairwise_point_ae_by_target.csv"),
+        ["target_type", *PAIR_KEYS],
+    )
+
+
+def test_add_relative_skill_binary(scores_binary):
+    assert_frame_parity(
+        su.add_relative_skill(scores_binary),
+        read_fixture("relskill_binary.csv"),
+        FU_BINARY,
+    )
+
+
+def test_add_relative_skill_binary_by_target_with_baseline(scores_binary):
+    rel = su.add_relative_skill(
+        scores_binary, by="target_type", baseline="EuroCOVIDhub-baseline"
+    )
+    assert_frame_parity(
+        rel, read_fixture("relskill_binary_by_target_baseline.csv"), FU_BINARY
+    )
+    assert_frame_parity(
+        su.summarise_scores(rel, by=["model", "target_type"]),
+        read_fixture("relskill_binary_by_target_baseline_summary.csv"),
+        ["model", "target_type"],
+    )
+
+
+def test_add_relative_skill_point_se_by_target(scores_point):
+    rel = su.add_relative_skill(
+        scores_point,
+        metric="se_point",
+        by="target_type",
+        baseline="EuroCOVIDhub-baseline",
+    )
+    assert_frame_parity(
+        rel, read_fixture("relskill_point_se_by_target_baseline.csv"), FU_POINT
+    )

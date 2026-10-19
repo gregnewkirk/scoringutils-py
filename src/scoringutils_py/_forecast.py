@@ -1,7 +1,8 @@
 """Forecast objects, validation, forecast unit and duplicate detection.
 
 Port of ``R/class-forecast.R``, ``R/class-forecast-quantile.R``,
-``R/class-forecast-sample.R``, ``R/forecast-unit.R``,
+``R/class-forecast-sample.R``, ``R/class-forecast-point.R``,
+``R/class-forecast-binary.R``, ``R/forecast-unit.R``,
 ``R/get-duplicate-forecasts.R``, ``R/get-protected-columns.R`` and
 ``R/get-forecast-type.R``.
 
@@ -21,7 +22,12 @@ from collections.abc import Sequence
 import numpy as np
 import pandas as pd
 
-from ._checks import inform
+from ._checks import (
+    _as_categorical,
+    check_input_binary,
+    check_input_point,
+    inform,
+)
 
 # ---------------------------------------------------------------------------
 # protected columns and forecast unit
@@ -137,17 +143,35 @@ class ForecastSample(Forecast):
     type_ids = ("sample_id",)
 
 
+class ForecastPoint(Forecast):
+    """A validated point forecast (R class ``forecast_point``)."""
+
+    forecast_type = "point"
+
+
+class ForecastBinary(Forecast):
+    """A validated binary forecast (R class ``forecast_binary``).
+
+    ``observed`` is a pandas Categorical with two categories and
+    ``predicted`` the probability of the second one.
+    """
+
+    forecast_type = "binary"
+
+
 _CLASSES: dict[str, type[Forecast]] = {
     "quantile": ForecastQuantile,
     "sample": ForecastSample,
+    "point": ForecastPoint,
+    "binary": ForecastBinary,
 }
 
 
 def new_forecast(data: pd.DataFrame, classname: str) -> Forecast:
     """Tag a data frame as a forecast without validating it.
 
-    ``classname`` is ``"forecast_quantile"`` / ``"forecast_sample"`` (the R
-    class names) or just ``"quantile"`` / ``"sample"``.
+    ``classname`` is an R class name such as ``"forecast_quantile"`` or just
+    the type: ``"quantile"``, ``"sample"``, ``"point"`` or ``"binary"``.
     """
     key = classname.removeprefix("forecast_")
     if key not in _CLASSES:
@@ -167,8 +191,16 @@ def is_forecast_sample(x) -> bool:
     return isinstance(x, ForecastSample)
 
 
+def is_forecast_point(x) -> bool:
+    return isinstance(x, ForecastPoint)
+
+
+def is_forecast_binary(x) -> bool:
+    return isinstance(x, ForecastBinary)
+
+
 def get_forecast_type(forecast) -> str:
-    """``"quantile"`` or ``"sample"``; errors for anything else."""
+    """``"quantile"``, ``"sample"``, ``"point"`` or ``"binary"``."""
     if isinstance(forecast, Forecast) and forecast.forecast_type:
         return forecast.forecast_type
     raise TypeError(
@@ -324,6 +356,70 @@ def as_forecast_sample(
     return forecast
 
 
+def as_forecast_point(
+    data,
+    forecast_unit: Sequence[str] | None = None,
+    observed: str | None = None,
+    predicted: str | None = None,
+) -> ForecastPoint:
+    """Create and validate a point forecast.
+
+    ``data`` needs numeric columns ``observed`` and ``predicted``.
+
+    If ``data`` is a :class:`ForecastQuantile`, the median (quantile level
+    0.5) becomes the point forecast instead, as in R's
+    ``as_forecast_point.forecast_quantile()``. Like R, that conversion does
+    not re-validate the result.
+    """
+    if isinstance(data, ForecastQuantile):
+        if forecast_unit is not None or observed is not None or predicted is not None:
+            raise TypeError(
+                "`forecast_unit`, `observed` and `predicted` do not apply when "
+                "converting a ForecastQuantile to a point forecast."
+            )
+        return _quantile_to_point(data)
+    data = _as_forecast_generic(
+        data, forecast_unit, observed=observed, predicted=predicted
+    )
+    forecast = ForecastPoint(data)
+    assert_forecast(forecast)
+    return forecast
+
+
+def _quantile_to_point(data: ForecastQuantile) -> ForecastPoint:
+    assert_forecast(data, verbose=False)
+    levels = pd.unique(data["quantile_level"])
+    if not np.any(levels == 0.5):
+        raise ValueError(
+            "Assertion on '0.5' failed: Must be a subset of "
+            f"{{{_fmt_set(levels)}}}, but has additional elements {{'0.5'}}."
+        )
+    df = pd.DataFrame(data)
+    out = df[df["quantile_level"] == 0.5].drop(columns="quantile_level")
+    return ForecastPoint(out.reset_index(drop=True))
+
+
+def as_forecast_binary(
+    data,
+    forecast_unit: Sequence[str] | None = None,
+    observed: str | None = None,
+    predicted: str | None = None,
+) -> ForecastBinary:
+    """Create and validate a binary forecast.
+
+    ``observed`` must be a pandas Categorical column with exactly two
+    categories (R: a factor with two levels), for example
+    ``pd.Categorical(df.observed, categories=[0, 1])``. ``predicted`` holds
+    the probability that the outcome is the second category.
+    """
+    data = _as_forecast_generic(
+        data, forecast_unit, observed=observed, predicted=predicted
+    )
+    forecast = ForecastBinary(data)
+    assert_forecast(forecast)
+    return forecast
+
+
 # R quantile() types 1-9 and the matching numpy methods
 _QUANTILE_METHODS = {
     1: "inverted_cdf",
@@ -402,7 +498,38 @@ def assert_forecast(forecast, forecast_type: str | None = None, verbose: bool = 
         _assert_forecast_type(forecast, "sample", forecast_type)
         _assert_numeric(forecast["observed"], "observed")
         _assert_numeric(forecast["predicted"], "predicted")
+    elif isinstance(forecast, ForecastPoint):
+        _assert_forecast_generic(forecast, verbose)
+        _assert_forecast_type(forecast, "point", forecast_type)
+        _check_input_column(check_input_point, forecast, "point")
+    elif isinstance(forecast, ForecastBinary):
+        _assert_forecast_generic(forecast, verbose)
+        _assert_forecast_type(forecast, "binary", forecast_type)
+        if "sample_id" in forecast.columns or "quantile_level" in forecast.columns:
+            raise ValueError(
+                "Checking `forecast`: Input looks like a binary forecast, but an "
+                "additional column called `sample_id` or `quantile` was found. "
+                "Please remove the column."
+            )
+        _check_input_column(check_input_binary, forecast, "binary")
     return None
+
+
+def _check_input_column(check, forecast: Forecast, kind: str) -> None:
+    try:
+        if kind == "binary":
+            observed = _as_categorical(forecast["observed"])
+        else:
+            _assert_numeric(forecast["observed"], "observed")
+            observed = forecast["observed"].to_numpy(dtype=float, na_value=np.nan)
+        _assert_numeric(forecast["predicted"], "predicted")
+        predicted = forecast["predicted"].to_numpy(dtype=float, na_value=np.nan)
+        check(observed, predicted)
+    except (TypeError, ValueError) as e:
+        raise type(e)(
+            f"Checking `forecast`: Input looks like a {kind} forecast, but found "
+            f"the following issue: {e}"
+        ) from None
 
 
 def _assert_subset(needed, available, name: str) -> None:

@@ -1,7 +1,8 @@
 # Example data: source and licence
 
-`example_quantile.csv.gz`, `example_sample_continuous.csv.gz` and
-`example_sample_discrete.csv.gz` are exported unchanged (all rows, all
+`example_quantile.csv.gz`, `example_sample_continuous.csv.gz`,
+`example_sample_discrete.csv.gz`, `example_point.csv.gz` and
+`example_binary.csv.gz` are exported unchanged (all rows, all
 columns, full precision) from the datasets of the same name in the R package
 scoringutils 2.3.0 by `r/generate_fixtures.R`.
 

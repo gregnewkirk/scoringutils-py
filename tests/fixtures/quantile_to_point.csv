@@ -1,0 +1,888 @@
+location,target_end_date,target_type,observed,location_name,forecast_date,predicted,model,horizon
+DE,2021-05-08,Cases,106987,Germany,2021-05-03,119258,EuroCOVIDhub-ensemble,1
+DE,2021-05-08,Cases,106987,Germany,2021-05-03,132607,EuroCOVIDhub-baseline,1
+DE,2021-05-08,Cases,106987,Germany,2021-05-03,151179,epiforecasts-EpiNow2,1
+DE,2021-05-08,Deaths,1582,Germany,2021-05-03,1568,EuroCOVIDhub-ensemble,1
+DE,2021-05-08,Deaths,1582,Germany,2021-05-03,1597,EuroCOVIDhub-baseline,1
+DE,2021-05-08,Deaths,1582,Germany,2021-05-03,1374,UMass-MechBayes,1
+DE,2021-05-08,Deaths,1582,Germany,2021-05-03,1606,epiforecasts-EpiNow2,1
+DE,2021-05-15,Cases,64985,Germany,2021-05-03,110716,EuroCOVIDhub-ensemble,2
+DE,2021-05-15,Cases,64985,Germany,2021-05-10,92649,EuroCOVIDhub-ensemble,1
+DE,2021-05-15,Cases,64985,Germany,2021-05-03,132607,EuroCOVIDhub-baseline,2
+DE,2021-05-15,Cases,64985,Germany,2021-05-10,106987,EuroCOVIDhub-baseline,1
+DE,2021-05-15,Cases,64985,Germany,2021-05-03,158377,epiforecasts-EpiNow2,2
+DE,2021-05-15,Cases,64985,Germany,2021-05-10,115688,epiforecasts-EpiNow2,1
+DE,2021-05-15,Deaths,1311,Germany,2021-05-03,1521,EuroCOVIDhub-ensemble,2
+DE,2021-05-15,Deaths,1311,Germany,2021-05-10,1422,EuroCOVIDhub-ensemble,1
+DE,2021-05-15,Deaths,1311,Germany,2021-05-03,1597,EuroCOVIDhub-baseline,2
+DE,2021-05-15,Deaths,1311,Germany,2021-05-10,1582,EuroCOVIDhub-baseline,1
+DE,2021-05-15,Deaths,1311,Germany,2021-05-03,1224,UMass-MechBayes,2
+DE,2021-05-15,Deaths,1311,Germany,2021-05-10,1185,UMass-MechBayes,1
+DE,2021-05-15,Deaths,1311,Germany,2021-05-03,1768,epiforecasts-EpiNow2,2
+DE,2021-05-15,Deaths,1311,Germany,2021-05-10,1218,epiforecasts-EpiNow2,1
+DE,2021-05-22,Cases,57147,Germany,2021-05-03,103780,EuroCOVIDhub-ensemble,3
+DE,2021-05-22,Cases,57147,Germany,2021-05-10,80578,EuroCOVIDhub-ensemble,2
+DE,2021-05-22,Cases,57147,Germany,2021-05-17,56363,EuroCOVIDhub-ensemble,1
+DE,2021-05-22,Cases,57147,Germany,2021-05-03,132607,EuroCOVIDhub-baseline,3
+DE,2021-05-22,Cases,57147,Germany,2021-05-10,106987,EuroCOVIDhub-baseline,2
+DE,2021-05-22,Cases,57147,Germany,2021-05-17,64985,EuroCOVIDhub-baseline,1
+DE,2021-05-22,Cases,57147,Germany,2021-05-03,166464,epiforecasts-EpiNow2,3
+DE,2021-05-22,Cases,57147,Germany,2021-05-10,108781,epiforecasts-EpiNow2,2
+DE,2021-05-22,Cases,57147,Germany,2021-05-17,70472,epiforecasts-EpiNow2,1
+DE,2021-05-22,Deaths,1285,Germany,2021-05-03,1435,EuroCOVIDhub-ensemble,3
+DE,2021-05-22,Deaths,1285,Germany,2021-05-10,1312,EuroCOVIDhub-ensemble,2
+DE,2021-05-22,Deaths,1285,Germany,2021-05-17,1156,EuroCOVIDhub-ensemble,1
+DE,2021-05-22,Deaths,1285,Germany,2021-05-03,1597,EuroCOVIDhub-baseline,3
+DE,2021-05-22,Deaths,1285,Germany,2021-05-10,1582,EuroCOVIDhub-baseline,2
+DE,2021-05-22,Deaths,1285,Germany,2021-05-17,1311,EuroCOVIDhub-baseline,1
+DE,2021-05-22,Deaths,1285,Germany,2021-05-03,1058,UMass-MechBayes,3
+DE,2021-05-22,Deaths,1285,Germany,2021-05-10,955,UMass-MechBayes,2
+DE,2021-05-22,Deaths,1285,Germany,2021-05-17,999,UMass-MechBayes,1
+DE,2021-05-22,Deaths,1285,Germany,2021-05-03,1868,epiforecasts-EpiNow2,3
+DE,2021-05-22,Deaths,1285,Germany,2021-05-10,1304,epiforecasts-EpiNow2,2
+DE,2021-05-22,Deaths,1285,Germany,2021-05-17,898,epiforecasts-EpiNow2,1
+DE,2021-05-29,Cases,31653,Germany,2021-05-10,71116,EuroCOVIDhub-ensemble,3
+DE,2021-05-29,Cases,31653,Germany,2021-05-17,42330,EuroCOVIDhub-ensemble,2
+DE,2021-05-29,Cases,31653,Germany,2021-05-24,44882,EuroCOVIDhub-ensemble,1
+DE,2021-05-29,Cases,31653,Germany,2021-05-10,106987,EuroCOVIDhub-baseline,3
+DE,2021-05-29,Cases,31653,Germany,2021-05-17,64985,EuroCOVIDhub-baseline,2
+DE,2021-05-29,Cases,31653,Germany,2021-05-24,57147,EuroCOVIDhub-baseline,1
+DE,2021-05-29,Cases,31653,Germany,2021-05-10,103278,epiforecasts-EpiNow2,3
+DE,2021-05-29,Cases,31653,Germany,2021-05-17,58584,epiforecasts-EpiNow2,2
+DE,2021-05-29,Cases,31653,Germany,2021-05-24,45850,epiforecasts-EpiNow2,1
+DE,2021-05-29,Deaths,1028,Germany,2021-05-10,1187,EuroCOVIDhub-ensemble,3
+DE,2021-05-29,Deaths,1028,Germany,2021-05-17,984,EuroCOVIDhub-ensemble,2
+DE,2021-05-29,Deaths,1028,Germany,2021-05-24,1028,EuroCOVIDhub-ensemble,1
+DE,2021-05-29,Deaths,1028,Germany,2021-05-10,1582,EuroCOVIDhub-baseline,3
+DE,2021-05-29,Deaths,1028,Germany,2021-05-17,1311,EuroCOVIDhub-baseline,2
+DE,2021-05-29,Deaths,1028,Germany,2021-05-24,1285,EuroCOVIDhub-baseline,1
+DE,2021-05-29,Deaths,1028,Germany,2021-05-10,741,UMass-MechBayes,3
+DE,2021-05-29,Deaths,1028,Germany,2021-05-17,791,UMass-MechBayes,2
+DE,2021-05-29,Deaths,1028,Germany,2021-05-24,871,UMass-MechBayes,1
+DE,2021-05-29,Deaths,1028,Germany,2021-05-10,1242,epiforecasts-EpiNow2,3
+DE,2021-05-29,Deaths,1028,Germany,2021-05-17,807,epiforecasts-EpiNow2,2
+DE,2021-05-29,Deaths,1028,Germany,2021-05-24,830,epiforecasts-EpiNow2,1
+DE,2021-06-05,Cases,22262,Germany,2021-05-17,33016,EuroCOVIDhub-ensemble,3
+DE,2021-06-05,Cases,22262,Germany,2021-05-24,35510,EuroCOVIDhub-ensemble,2
+DE,2021-06-05,Cases,22262,Germany,2021-05-31,23904,EuroCOVIDhub-ensemble,1
+DE,2021-06-05,Cases,22262,Germany,2021-05-17,64985,EuroCOVIDhub-baseline,3
+DE,2021-06-05,Cases,22262,Germany,2021-05-24,57147,EuroCOVIDhub-baseline,2
+DE,2021-06-05,Cases,22262,Germany,2021-05-31,31653,EuroCOVIDhub-baseline,1
+DE,2021-06-05,Cases,22262,Germany,2021-05-17,48430,epiforecasts-EpiNow2,3
+DE,2021-06-05,Cases,22262,Germany,2021-05-24,34106,epiforecasts-EpiNow2,2
+DE,2021-06-05,Cases,22262,Germany,2021-05-31,25708,epiforecasts-EpiNow2,1
+DE,2021-06-05,Deaths,815,Germany,2021-05-17,827,EuroCOVIDhub-ensemble,3
+DE,2021-06-05,Deaths,815,Germany,2021-05-24,856,EuroCOVIDhub-ensemble,2
+DE,2021-06-05,Deaths,815,Germany,2021-05-31,760,EuroCOVIDhub-ensemble,1
+DE,2021-06-05,Deaths,815,Germany,2021-05-17,1311,EuroCOVIDhub-baseline,3
+DE,2021-06-05,Deaths,815,Germany,2021-05-24,1285,EuroCOVIDhub-baseline,2
+DE,2021-06-05,Deaths,815,Germany,2021-05-31,1028,EuroCOVIDhub-baseline,1
+DE,2021-06-05,Deaths,815,Germany,2021-05-17,596,UMass-MechBayes,3
+DE,2021-06-05,Deaths,815,Germany,2021-05-24,668,UMass-MechBayes,2
+DE,2021-06-05,Deaths,815,Germany,2021-05-31,696,UMass-MechBayes,1
+DE,2021-06-05,Deaths,815,Germany,2021-05-17,740,epiforecasts-EpiNow2,3
+DE,2021-06-05,Deaths,815,Germany,2021-05-24,656,epiforecasts-EpiNow2,2
+DE,2021-06-05,Deaths,815,Germany,2021-05-31,599,epiforecasts-EpiNow2,1
+DE,2021-06-12,Cases,15361,Germany,2021-05-24,29375,EuroCOVIDhub-ensemble,3
+DE,2021-06-12,Cases,15361,Germany,2021-05-31,16094,EuroCOVIDhub-ensemble,2
+DE,2021-06-12,Cases,15361,Germany,2021-06-07,15704,EuroCOVIDhub-ensemble,1
+DE,2021-06-12,Cases,15361,Germany,2021-05-24,57147,EuroCOVIDhub-baseline,3
+DE,2021-06-12,Cases,15361,Germany,2021-05-31,31653,EuroCOVIDhub-baseline,2
+DE,2021-06-12,Cases,15361,Germany,2021-06-07,22262,EuroCOVIDhub-baseline,1
+DE,2021-06-12,Cases,15361,Germany,2021-05-24,26598,epiforecasts-EpiNow2,3
+DE,2021-06-12,Cases,15361,Germany,2021-05-31,16992,epiforecasts-EpiNow2,2
+DE,2021-06-12,Cases,15361,Germany,2021-06-07,15567,epiforecasts-EpiNow2,1
+DE,2021-06-12,Deaths,613,Germany,2021-05-24,722,EuroCOVIDhub-ensemble,3
+DE,2021-06-12,Deaths,613,Germany,2021-05-31,604,EuroCOVIDhub-ensemble,2
+DE,2021-06-12,Deaths,613,Germany,2021-06-07,592,EuroCOVIDhub-ensemble,1
+DE,2021-06-12,Deaths,613,Germany,2021-05-24,1285,EuroCOVIDhub-baseline,3
+DE,2021-06-12,Deaths,613,Germany,2021-05-31,1028,EuroCOVIDhub-baseline,2
+DE,2021-06-12,Deaths,613,Germany,2021-06-07,815,EuroCOVIDhub-baseline,1
+DE,2021-06-12,Deaths,613,Germany,2021-05-24,499,UMass-MechBayes,3
+DE,2021-06-12,Deaths,613,Germany,2021-05-31,518,UMass-MechBayes,2
+DE,2021-06-12,Deaths,613,Germany,2021-06-07,528,UMass-MechBayes,1
+DE,2021-06-12,Deaths,613,Germany,2021-05-24,520,epiforecasts-EpiNow2,3
+DE,2021-06-12,Deaths,613,Germany,2021-05-31,442,epiforecasts-EpiNow2,2
+DE,2021-06-12,Deaths,613,Germany,2021-06-07,480,epiforecasts-EpiNow2,1
+DE,2021-06-19,Cases,7302,Germany,2021-05-31,11187,EuroCOVIDhub-ensemble,3
+DE,2021-06-19,Cases,7302,Germany,2021-06-07,10999,EuroCOVIDhub-ensemble,2
+DE,2021-06-19,Cases,7302,Germany,2021-06-14,10785,EuroCOVIDhub-ensemble,1
+DE,2021-06-19,Cases,7302,Germany,2021-05-31,31653,EuroCOVIDhub-baseline,3
+DE,2021-06-19,Cases,7302,Germany,2021-06-07,22262,EuroCOVIDhub-baseline,2
+DE,2021-06-19,Cases,7302,Germany,2021-06-14,15361,EuroCOVIDhub-baseline,1
+DE,2021-06-19,Cases,7302,Germany,2021-05-31,11461,epiforecasts-EpiNow2,3
+DE,2021-06-19,Cases,7302,Germany,2021-06-07,9934,epiforecasts-EpiNow2,2
+DE,2021-06-19,Cases,7302,Germany,2021-06-14,10062,epiforecasts-EpiNow2,1
+DE,2021-06-19,Deaths,549,Germany,2021-05-31,473,EuroCOVIDhub-ensemble,3
+DE,2021-06-19,Deaths,549,Germany,2021-06-07,445,EuroCOVIDhub-ensemble,2
+DE,2021-06-19,Deaths,549,Germany,2021-06-14,441,EuroCOVIDhub-ensemble,1
+DE,2021-06-19,Deaths,549,Germany,2021-05-31,1028,EuroCOVIDhub-baseline,3
+DE,2021-06-19,Deaths,549,Germany,2021-06-07,815,EuroCOVIDhub-baseline,2
+DE,2021-06-19,Deaths,549,Germany,2021-06-14,613,EuroCOVIDhub-baseline,1
+DE,2021-06-19,Deaths,549,Germany,2021-05-31,378,UMass-MechBayes,3
+DE,2021-06-19,Deaths,549,Germany,2021-06-07,390,UMass-MechBayes,2
+DE,2021-06-19,Deaths,549,Germany,2021-06-14,394,UMass-MechBayes,1
+DE,2021-06-19,Deaths,549,Germany,2021-05-31,322,epiforecasts-EpiNow2,3
+DE,2021-06-19,Deaths,549,Germany,2021-06-07,338,epiforecasts-EpiNow2,2
+DE,2021-06-19,Deaths,549,Germany,2021-06-14,355,epiforecasts-EpiNow2,1
+DE,2021-06-26,Cases,4556,Germany,2021-06-07,8186,EuroCOVIDhub-ensemble,3
+DE,2021-06-26,Cases,4556,Germany,2021-06-14,7622,EuroCOVIDhub-ensemble,2
+DE,2021-06-26,Cases,4556,Germany,2021-06-21,5042,EuroCOVIDhub-ensemble,1
+DE,2021-06-26,Cases,4556,Germany,2021-06-07,22262,EuroCOVIDhub-baseline,3
+DE,2021-06-26,Cases,4556,Germany,2021-06-14,15361,EuroCOVIDhub-baseline,2
+DE,2021-06-26,Cases,4556,Germany,2021-06-21,7302,EuroCOVIDhub-baseline,1
+DE,2021-06-26,Cases,4556,Germany,2021-06-07,6365,epiforecasts-EpiNow2,3
+DE,2021-06-26,Cases,4556,Germany,2021-06-14,6156,epiforecasts-EpiNow2,2
+DE,2021-06-26,Cases,4556,Germany,2021-06-21,4819,epiforecasts-EpiNow2,1
+DE,2021-06-26,Deaths,371,Germany,2021-06-07,337,EuroCOVIDhub-ensemble,3
+DE,2021-06-26,Deaths,371,Germany,2021-06-14,335,EuroCOVIDhub-ensemble,2
+DE,2021-06-26,Deaths,371,Germany,2021-06-21,370,EuroCOVIDhub-ensemble,1
+DE,2021-06-26,Deaths,371,Germany,2021-06-07,815,EuroCOVIDhub-baseline,3
+DE,2021-06-26,Deaths,371,Germany,2021-06-14,613,EuroCOVIDhub-baseline,2
+DE,2021-06-26,Deaths,371,Germany,2021-06-21,549,EuroCOVIDhub-baseline,1
+DE,2021-06-26,Deaths,371,Germany,2021-06-07,271,UMass-MechBayes,3
+DE,2021-06-26,Deaths,371,Germany,2021-06-14,280,UMass-MechBayes,2
+DE,2021-06-26,Deaths,371,Germany,2021-06-21,305,UMass-MechBayes,1
+DE,2021-06-26,Deaths,371,Germany,2021-06-07,227,epiforecasts-EpiNow2,3
+DE,2021-06-26,Deaths,371,Germany,2021-06-14,244,epiforecasts-EpiNow2,2
+DE,2021-06-26,Deaths,371,Germany,2021-06-21,254,epiforecasts-EpiNow2,1
+DE,2021-07-03,Cases,3906,Germany,2021-06-14,5708,EuroCOVIDhub-ensemble,3
+DE,2021-07-03,Cases,3906,Germany,2021-06-21,3035,EuroCOVIDhub-ensemble,2
+DE,2021-07-03,Cases,3906,Germany,2021-06-28,3143,EuroCOVIDhub-ensemble,1
+DE,2021-07-03,Cases,3906,Germany,2021-06-14,15361,EuroCOVIDhub-baseline,3
+DE,2021-07-03,Cases,3906,Germany,2021-06-21,7302,EuroCOVIDhub-baseline,2
+DE,2021-07-03,Cases,3906,Germany,2021-06-28,4556,EuroCOVIDhub-baseline,1
+DE,2021-07-03,Cases,3906,Germany,2021-06-14,3784,epiforecasts-EpiNow2,3
+DE,2021-07-03,Cases,3906,Germany,2021-06-21,2717,epiforecasts-EpiNow2,2
+DE,2021-07-03,Cases,3906,Germany,2021-06-28,2669,epiforecasts-EpiNow2,1
+DE,2021-07-03,Deaths,279,Germany,2021-06-14,252,EuroCOVIDhub-ensemble,3
+DE,2021-07-03,Deaths,279,Germany,2021-06-21,277,EuroCOVIDhub-ensemble,2
+DE,2021-07-03,Deaths,279,Germany,2021-06-28,255,EuroCOVIDhub-ensemble,1
+DE,2021-07-03,Deaths,279,Germany,2021-06-14,613,EuroCOVIDhub-baseline,3
+DE,2021-07-03,Deaths,279,Germany,2021-06-21,549,EuroCOVIDhub-baseline,2
+DE,2021-07-03,Deaths,279,Germany,2021-06-28,371,EuroCOVIDhub-baseline,1
+DE,2021-07-03,Deaths,279,Germany,2021-06-14,193,UMass-MechBayes,3
+DE,2021-07-03,Deaths,279,Germany,2021-06-21,217,UMass-MechBayes,2
+DE,2021-07-03,Deaths,279,Germany,2021-06-28,227,UMass-MechBayes,1
+DE,2021-07-03,Deaths,279,Germany,2021-06-14,153,epiforecasts-EpiNow2,3
+DE,2021-07-03,Deaths,279,Germany,2021-06-21,154,epiforecasts-EpiNow2,2
+DE,2021-07-03,Deaths,279,Germany,2021-06-28,182,epiforecasts-EpiNow2,1
+DE,2021-07-10,Cases,5105,Germany,2021-06-21,2009,EuroCOVIDhub-ensemble,3
+DE,2021-07-10,Cases,5105,Germany,2021-06-28,2064,EuroCOVIDhub-ensemble,2
+DE,2021-07-10,Cases,5105,Germany,2021-07-05,3228,EuroCOVIDhub-ensemble,1
+DE,2021-07-10,Cases,5105,Germany,2021-06-21,7302,EuroCOVIDhub-baseline,3
+DE,2021-07-10,Cases,5105,Germany,2021-06-28,4556,EuroCOVIDhub-baseline,2
+DE,2021-07-10,Cases,5105,Germany,2021-07-05,3906,EuroCOVIDhub-baseline,1
+DE,2021-07-10,Cases,5105,Germany,2021-06-21,1529,epiforecasts-EpiNow2,3
+DE,2021-07-10,Cases,5105,Germany,2021-06-28,1497,epiforecasts-EpiNow2,2
+DE,2021-07-10,Cases,5105,Germany,2021-07-05,2372,epiforecasts-EpiNow2,1
+DE,2021-07-10,Deaths,199,Germany,2021-06-21,206,EuroCOVIDhub-ensemble,3
+DE,2021-07-10,Deaths,199,Germany,2021-06-28,176,EuroCOVIDhub-ensemble,2
+DE,2021-07-10,Deaths,199,Germany,2021-07-05,186,EuroCOVIDhub-ensemble,1
+DE,2021-07-10,Deaths,199,Germany,2021-06-21,549,EuroCOVIDhub-baseline,3
+DE,2021-07-10,Deaths,199,Germany,2021-06-28,371,EuroCOVIDhub-baseline,2
+DE,2021-07-10,Deaths,199,Germany,2021-07-05,279,EuroCOVIDhub-baseline,1
+DE,2021-07-10,Deaths,199,Germany,2021-06-21,147,UMass-MechBayes,3
+DE,2021-07-10,Deaths,199,Germany,2021-06-28,157,UMass-MechBayes,2
+DE,2021-07-10,Deaths,199,Germany,2021-07-05,171,UMass-MechBayes,1
+DE,2021-07-10,Deaths,199,Germany,2021-06-21,92,epiforecasts-EpiNow2,3
+DE,2021-07-10,Deaths,199,Germany,2021-06-28,105,epiforecasts-EpiNow2,2
+DE,2021-07-10,Deaths,199,Germany,2021-07-05,145,epiforecasts-EpiNow2,1
+DE,2021-07-17,Cases,8089,Germany,2021-06-28,1531,EuroCOVIDhub-ensemble,3
+DE,2021-07-17,Cases,8089,Germany,2021-07-05,2763,EuroCOVIDhub-ensemble,2
+DE,2021-07-17,Cases,8089,Germany,2021-07-12,5110,EuroCOVIDhub-ensemble,1
+DE,2021-07-17,Cases,8089,Germany,2021-06-28,4556,EuroCOVIDhub-baseline,3
+DE,2021-07-17,Cases,8089,Germany,2021-07-05,3906,EuroCOVIDhub-baseline,2
+DE,2021-07-17,Cases,8089,Germany,2021-07-12,5105,EuroCOVIDhub-baseline,1
+DE,2021-07-17,Cases,8089,Germany,2021-06-28,835,epiforecasts-EpiNow2,3
+DE,2021-07-17,Cases,8089,Germany,2021-07-05,1591,epiforecasts-EpiNow2,2
+DE,2021-07-17,Cases,8089,Germany,2021-07-12,5226,epiforecasts-EpiNow2,1
+DE,2021-07-17,Deaths,130,Germany,2021-06-28,125,EuroCOVIDhub-ensemble,3
+DE,2021-07-17,Deaths,130,Germany,2021-07-05,138,EuroCOVIDhub-ensemble,2
+DE,2021-07-17,Deaths,130,Germany,2021-07-12,155,EuroCOVIDhub-ensemble,1
+DE,2021-07-17,Deaths,130,Germany,2021-06-28,371,EuroCOVIDhub-baseline,3
+DE,2021-07-17,Deaths,130,Germany,2021-07-05,279,EuroCOVIDhub-baseline,2
+DE,2021-07-17,Deaths,130,Germany,2021-07-12,199,EuroCOVIDhub-baseline,1
+DE,2021-07-17,Deaths,130,Germany,2021-06-28,105,UMass-MechBayes,3
+DE,2021-07-17,Deaths,130,Germany,2021-07-05,121,UMass-MechBayes,2
+DE,2021-07-17,Deaths,130,Germany,2021-07-12,118,UMass-MechBayes,1
+DE,2021-07-17,Deaths,130,Germany,2021-06-28,62,epiforecasts-EpiNow2,3
+DE,2021-07-17,Deaths,130,Germany,2021-07-05,100,epiforecasts-EpiNow2,2
+DE,2021-07-17,Deaths,130,Germany,2021-07-12,183,epiforecasts-EpiNow2,1
+DE,2021-07-24,Cases,10616,Germany,2021-07-05,2564,EuroCOVIDhub-ensemble,3
+DE,2021-07-24,Cases,10616,Germany,2021-07-12,5473,EuroCOVIDhub-ensemble,2
+DE,2021-07-24,Cases,10616,Germany,2021-07-05,3906,EuroCOVIDhub-baseline,3
+DE,2021-07-24,Cases,10616,Germany,2021-07-12,5105,EuroCOVIDhub-baseline,2
+DE,2021-07-24,Cases,10616,Germany,2021-07-05,1055,epiforecasts-EpiNow2,3
+DE,2021-07-24,Cases,10616,Germany,2021-07-12,6245,epiforecasts-EpiNow2,2
+DE,2021-07-24,Deaths,162,Germany,2021-07-05,108,EuroCOVIDhub-ensemble,3
+DE,2021-07-24,Deaths,162,Germany,2021-07-12,138,EuroCOVIDhub-ensemble,2
+DE,2021-07-24,Deaths,162,Germany,2021-07-05,279,EuroCOVIDhub-baseline,3
+DE,2021-07-24,Deaths,162,Germany,2021-07-12,199,EuroCOVIDhub-baseline,2
+DE,2021-07-24,Deaths,162,Germany,2021-07-05,84,UMass-MechBayes,3
+DE,2021-07-24,Deaths,162,Germany,2021-07-12,90,UMass-MechBayes,2
+DE,2021-07-24,Deaths,162,Germany,2021-07-05,64,epiforecasts-EpiNow2,3
+DE,2021-07-24,Deaths,162,Germany,2021-07-12,195,epiforecasts-EpiNow2,2
+FR,2021-05-08,Cases,120870,France,2021-05-03,129834,EuroCOVIDhub-ensemble,1
+FR,2021-05-08,Cases,120870,France,2021-05-03,165210,EuroCOVIDhub-baseline,1
+FR,2021-05-08,Cases,120870,France,2021-05-03,197828,epiforecasts-EpiNow2,1
+FR,2021-05-08,Deaths,1523,France,2021-05-03,1529,EuroCOVIDhub-ensemble,1
+FR,2021-05-08,Deaths,1523,France,2021-05-03,1961,EuroCOVIDhub-baseline,1
+FR,2021-05-08,Deaths,1523,France,2021-05-03,1564,UMass-MechBayes,1
+FR,2021-05-08,Deaths,1523,France,2021-05-03,1795,epiforecasts-EpiNow2,1
+FR,2021-05-15,Cases,93546,France,2021-05-03,119790,EuroCOVIDhub-ensemble,2
+FR,2021-05-15,Cases,93546,France,2021-05-10,108847,EuroCOVIDhub-ensemble,1
+FR,2021-05-15,Cases,93546,France,2021-05-03,165210,EuroCOVIDhub-baseline,2
+FR,2021-05-15,Cases,93546,France,2021-05-10,120870,EuroCOVIDhub-baseline,1
+FR,2021-05-15,Cases,93546,France,2021-05-03,194892,epiforecasts-EpiNow2,2
+FR,2021-05-15,Cases,93546,France,2021-05-10,138826,epiforecasts-EpiNow2,1
+FR,2021-05-15,Deaths,1234,France,2021-05-03,1344,EuroCOVIDhub-ensemble,2
+FR,2021-05-15,Deaths,1234,France,2021-05-10,1364,EuroCOVIDhub-ensemble,1
+FR,2021-05-15,Deaths,1234,France,2021-05-03,1961,EuroCOVIDhub-baseline,2
+FR,2021-05-15,Deaths,1234,France,2021-05-10,1523,EuroCOVIDhub-baseline,1
+FR,2021-05-15,Deaths,1234,France,2021-05-03,1285,UMass-MechBayes,2
+FR,2021-05-15,Deaths,1234,France,2021-05-10,1284,UMass-MechBayes,1
+FR,2021-05-15,Deaths,1234,France,2021-05-03,1714,epiforecasts-EpiNow2,2
+FR,2021-05-15,Deaths,1234,France,2021-05-10,1322,epiforecasts-EpiNow2,1
+FR,2021-05-22,Cases,-272773,France,2021-05-03,112635,EuroCOVIDhub-ensemble,3
+FR,2021-05-22,Cases,-272773,France,2021-05-10,94640,EuroCOVIDhub-ensemble,2
+FR,2021-05-22,Cases,-272773,France,2021-05-17,82309,EuroCOVIDhub-ensemble,1
+FR,2021-05-22,Cases,-272773,France,2021-05-03,165210,EuroCOVIDhub-baseline,3
+FR,2021-05-22,Cases,-272773,France,2021-05-10,120870,EuroCOVIDhub-baseline,2
+FR,2021-05-22,Cases,-272773,France,2021-05-17,93546,EuroCOVIDhub-baseline,1
+FR,2021-05-22,Cases,-272773,France,2021-05-03,180535,epiforecasts-EpiNow2,3
+FR,2021-05-22,Cases,-272773,France,2021-05-10,123345,epiforecasts-EpiNow2,2
+FR,2021-05-22,Cases,-272773,France,2021-05-17,90427,epiforecasts-EpiNow2,1
+FR,2021-05-22,Deaths,968,France,2021-05-03,1187,EuroCOVIDhub-ensemble,3
+FR,2021-05-22,Deaths,968,France,2021-05-10,1157,EuroCOVIDhub-ensemble,2
+FR,2021-05-22,Deaths,968,France,2021-05-17,1030,EuroCOVIDhub-ensemble,1
+FR,2021-05-22,Deaths,968,France,2021-05-03,1961,EuroCOVIDhub-baseline,3
+FR,2021-05-22,Deaths,968,France,2021-05-10,1523,EuroCOVIDhub-baseline,2
+FR,2021-05-22,Deaths,968,France,2021-05-17,1234,EuroCOVIDhub-baseline,1
+FR,2021-05-22,Deaths,968,France,2021-05-03,1026,UMass-MechBayes,3
+FR,2021-05-22,Deaths,968,France,2021-05-10,1046,UMass-MechBayes,2
+FR,2021-05-22,Deaths,968,France,2021-05-17,980,UMass-MechBayes,1
+FR,2021-05-22,Deaths,968,France,2021-05-03,1714,epiforecasts-EpiNow2,3
+FR,2021-05-22,Deaths,968,France,2021-05-10,1178,epiforecasts-EpiNow2,2
+FR,2021-05-22,Deaths,968,France,2021-05-17,970,epiforecasts-EpiNow2,1
+FR,2021-05-29,Cases,61415,France,2021-05-10,84926,EuroCOVIDhub-ensemble,3
+FR,2021-05-29,Cases,61415,France,2021-05-17,66731,EuroCOVIDhub-ensemble,2
+FR,2021-05-29,Cases,61415,France,2021-05-24,36204,EuroCOVIDhub-ensemble,1
+FR,2021-05-29,Cases,61415,France,2021-05-10,120870,EuroCOVIDhub-baseline,3
+FR,2021-05-29,Cases,61415,France,2021-05-17,93546,EuroCOVIDhub-baseline,2
+FR,2021-05-29,Cases,61415,France,2021-05-24,0,EuroCOVIDhub-baseline,1
+FR,2021-05-29,Cases,61415,France,2021-05-10,105168,epiforecasts-EpiNow2,3
+FR,2021-05-29,Cases,61415,France,2021-05-17,72210,epiforecasts-EpiNow2,2
+FR,2021-05-29,Cases,61415,France,2021-05-24,41526,epiforecasts-EpiNow2,1
+FR,2021-05-29,Deaths,802,France,2021-05-10,992,EuroCOVIDhub-ensemble,3
+FR,2021-05-29,Deaths,802,France,2021-05-17,843,EuroCOVIDhub-ensemble,2
+FR,2021-05-29,Deaths,802,France,2021-05-24,498,EuroCOVIDhub-ensemble,1
+FR,2021-05-29,Deaths,802,France,2021-05-10,1523,EuroCOVIDhub-baseline,3
+FR,2021-05-29,Deaths,802,France,2021-05-17,1234,EuroCOVIDhub-baseline,2
+FR,2021-05-29,Deaths,802,France,2021-05-24,968,EuroCOVIDhub-baseline,1
+FR,2021-05-29,Deaths,802,France,2021-05-10,810,UMass-MechBayes,3
+FR,2021-05-29,Deaths,802,France,2021-05-17,780,UMass-MechBayes,2
+FR,2021-05-29,Deaths,802,France,2021-05-24,524,UMass-MechBayes,1
+FR,2021-05-29,Deaths,802,France,2021-05-10,1052,epiforecasts-EpiNow2,3
+FR,2021-05-29,Deaths,802,France,2021-05-17,805,epiforecasts-EpiNow2,2
+FR,2021-05-29,Deaths,802,France,2021-05-24,577,epiforecasts-EpiNow2,1
+FR,2021-06-05,Cases,47597,France,2021-05-17,57189,EuroCOVIDhub-ensemble,3
+FR,2021-06-05,Cases,47597,France,2021-05-24,26467,EuroCOVIDhub-ensemble,2
+FR,2021-06-05,Cases,47597,France,2021-05-31,42516,EuroCOVIDhub-ensemble,1
+FR,2021-06-05,Cases,47597,France,2021-05-17,93546,EuroCOVIDhub-baseline,3
+FR,2021-06-05,Cases,47597,France,2021-05-24,0,EuroCOVIDhub-baseline,2
+FR,2021-06-05,Cases,47597,France,2021-05-31,61415,EuroCOVIDhub-baseline,1
+FR,2021-06-05,Cases,47597,France,2021-05-17,58226,epiforecasts-EpiNow2,3
+FR,2021-06-05,Cases,47597,France,2021-05-24,29751,epiforecasts-EpiNow2,2
+FR,2021-06-05,Cases,47597,France,2021-05-31,51327,epiforecasts-EpiNow2,1
+FR,2021-06-05,Deaths,592,France,2021-05-17,697,EuroCOVIDhub-ensemble,3
+FR,2021-06-05,Deaths,592,France,2021-05-24,373,EuroCOVIDhub-ensemble,2
+FR,2021-06-05,Deaths,592,France,2021-05-31,527,EuroCOVIDhub-ensemble,1
+FR,2021-06-05,Deaths,592,France,2021-05-17,1234,EuroCOVIDhub-baseline,3
+FR,2021-06-05,Deaths,592,France,2021-05-24,968,EuroCOVIDhub-baseline,2
+FR,2021-06-05,Deaths,592,France,2021-05-31,800,EuroCOVIDhub-baseline,1
+FR,2021-06-05,Deaths,592,France,2021-05-17,592,UMass-MechBayes,3
+FR,2021-06-05,Deaths,592,France,2021-05-24,345,UMass-MechBayes,2
+FR,2021-06-05,Deaths,592,France,2021-05-31,346,UMass-MechBayes,1
+FR,2021-06-05,Deaths,592,France,2021-05-17,675,epiforecasts-EpiNow2,3
+FR,2021-06-05,Deaths,592,France,2021-05-24,409,epiforecasts-EpiNow2,2
+FR,2021-06-12,Cases,27654,France,2021-05-24,19410,EuroCOVIDhub-ensemble,3
+FR,2021-06-12,Cases,27654,France,2021-05-31,32496,EuroCOVIDhub-ensemble,2
+FR,2021-06-12,Cases,27654,France,2021-06-07,40398,EuroCOVIDhub-ensemble,1
+FR,2021-06-12,Cases,27654,France,2021-05-24,0,EuroCOVIDhub-baseline,3
+FR,2021-06-12,Cases,27654,France,2021-05-31,61415,EuroCOVIDhub-baseline,2
+FR,2021-06-12,Cases,27654,France,2021-06-07,47597,EuroCOVIDhub-baseline,1
+FR,2021-06-12,Cases,27654,France,2021-05-24,20180,epiforecasts-EpiNow2,3
+FR,2021-06-12,Cases,27654,France,2021-05-31,24619,epiforecasts-EpiNow2,2
+FR,2021-06-12,Cases,27654,France,2021-06-07,38297,epiforecasts-EpiNow2,1
+FR,2021-06-12,Deaths,377,France,2021-05-24,264,EuroCOVIDhub-ensemble,3
+FR,2021-06-12,Deaths,377,France,2021-05-31,407,EuroCOVIDhub-ensemble,2
+FR,2021-06-12,Deaths,377,France,2021-06-07,449,EuroCOVIDhub-ensemble,1
+FR,2021-06-12,Deaths,377,France,2021-05-24,968,EuroCOVIDhub-baseline,3
+FR,2021-06-12,Deaths,377,France,2021-05-31,800,EuroCOVIDhub-baseline,2
+FR,2021-06-12,Deaths,377,France,2021-06-07,594,EuroCOVIDhub-baseline,1
+FR,2021-06-12,Deaths,377,France,2021-05-24,219,UMass-MechBayes,3
+FR,2021-06-12,Deaths,377,France,2021-05-31,229,UMass-MechBayes,2
+FR,2021-06-12,Deaths,377,France,2021-06-07,349,UMass-MechBayes,1
+FR,2021-06-12,Deaths,377,France,2021-05-24,290,epiforecasts-EpiNow2,3
+FR,2021-06-19,Cases,15577,France,2021-05-31,25582,EuroCOVIDhub-ensemble,3
+FR,2021-06-19,Cases,15577,France,2021-06-07,36711,EuroCOVIDhub-ensemble,2
+FR,2021-06-19,Cases,15577,France,2021-06-14,26097,EuroCOVIDhub-ensemble,1
+FR,2021-06-19,Cases,15577,France,2021-05-31,61415,EuroCOVIDhub-baseline,3
+FR,2021-06-19,Cases,15577,France,2021-06-07,47597,EuroCOVIDhub-baseline,2
+FR,2021-06-19,Cases,15577,France,2021-06-14,27654,EuroCOVIDhub-baseline,1
+FR,2021-06-19,Cases,15577,France,2021-05-31,9600,epiforecasts-EpiNow2,3
+FR,2021-06-19,Cases,15577,France,2021-06-07,21238,epiforecasts-EpiNow2,2
+FR,2021-06-19,Cases,15577,France,2021-06-14,25228,epiforecasts-EpiNow2,1
+FR,2021-06-19,Deaths,327,France,2021-05-31,288,EuroCOVIDhub-ensemble,3
+FR,2021-06-19,Deaths,327,France,2021-06-07,365,EuroCOVIDhub-ensemble,2
+FR,2021-06-19,Deaths,327,France,2021-06-14,316,EuroCOVIDhub-ensemble,1
+FR,2021-06-19,Deaths,327,France,2021-05-31,800,EuroCOVIDhub-baseline,3
+FR,2021-06-19,Deaths,327,France,2021-06-07,594,EuroCOVIDhub-baseline,2
+FR,2021-06-19,Deaths,327,France,2021-06-14,377,EuroCOVIDhub-baseline,1
+FR,2021-06-19,Deaths,327,France,2021-05-31,146,UMass-MechBayes,3
+FR,2021-06-19,Deaths,327,France,2021-06-07,294,UMass-MechBayes,2
+FR,2021-06-19,Deaths,327,France,2021-06-14,349,UMass-MechBayes,1
+FR,2021-06-26,Cases,10765,France,2021-06-07,35486,EuroCOVIDhub-ensemble,3
+FR,2021-06-26,Cases,10765,France,2021-06-14,21305,EuroCOVIDhub-ensemble,2
+FR,2021-06-26,Cases,10765,France,2021-06-21,12673,EuroCOVIDhub-ensemble,1
+FR,2021-06-26,Cases,10765,France,2021-06-07,47597,EuroCOVIDhub-baseline,3
+FR,2021-06-26,Cases,10765,France,2021-06-14,27654,EuroCOVIDhub-baseline,2
+FR,2021-06-26,Cases,10765,France,2021-06-21,15577,EuroCOVIDhub-baseline,1
+FR,2021-06-26,Cases,10765,France,2021-06-07,10050,epiforecasts-EpiNow2,3
+FR,2021-06-26,Cases,10765,France,2021-06-14,15078,epiforecasts-EpiNow2,2
+FR,2021-06-26,Cases,10765,France,2021-06-21,14124,epiforecasts-EpiNow2,1
+FR,2021-06-26,Deaths,214,France,2021-06-07,280,EuroCOVIDhub-ensemble,3
+FR,2021-06-26,Deaths,214,France,2021-06-14,262,EuroCOVIDhub-ensemble,2
+FR,2021-06-26,Deaths,214,France,2021-06-21,251,EuroCOVIDhub-ensemble,1
+FR,2021-06-26,Deaths,214,France,2021-06-07,594,EuroCOVIDhub-baseline,3
+FR,2021-06-26,Deaths,214,France,2021-06-14,377,EuroCOVIDhub-baseline,2
+FR,2021-06-26,Deaths,214,France,2021-06-21,327,EuroCOVIDhub-baseline,1
+FR,2021-06-26,Deaths,214,France,2021-06-07,247,UMass-MechBayes,3
+FR,2021-06-26,Deaths,214,France,2021-06-14,405,UMass-MechBayes,2
+FR,2021-06-26,Deaths,214,France,2021-06-21,304,UMass-MechBayes,1
+FR,2021-06-26,Deaths,214,France,2021-06-21,209,epiforecasts-EpiNow2,1
+FR,2021-07-03,Cases,13336,France,2021-06-14,18523,EuroCOVIDhub-ensemble,3
+FR,2021-07-03,Cases,13336,France,2021-06-21,9130,EuroCOVIDhub-ensemble,2
+FR,2021-07-03,Cases,13336,France,2021-06-28,7958,EuroCOVIDhub-ensemble,1
+FR,2021-07-03,Cases,13336,France,2021-06-14,27654,EuroCOVIDhub-baseline,3
+FR,2021-07-03,Cases,13336,France,2021-06-21,15577,EuroCOVIDhub-baseline,2
+FR,2021-07-03,Cases,13336,France,2021-06-28,10765,EuroCOVIDhub-baseline,1
+FR,2021-07-03,Cases,13336,France,2021-06-14,9174,epiforecasts-EpiNow2,3
+FR,2021-07-03,Cases,13336,France,2021-06-21,8781,epiforecasts-EpiNow2,2
+FR,2021-07-03,Cases,13336,France,2021-06-28,7882,epiforecasts-EpiNow2,1
+FR,2021-07-03,Deaths,186,France,2021-06-14,208,EuroCOVIDhub-ensemble,3
+FR,2021-07-03,Deaths,186,France,2021-06-21,194,EuroCOVIDhub-ensemble,2
+FR,2021-07-03,Deaths,186,France,2021-06-28,171,EuroCOVIDhub-ensemble,1
+FR,2021-07-03,Deaths,186,France,2021-06-14,377,EuroCOVIDhub-baseline,3
+FR,2021-07-03,Deaths,186,France,2021-06-21,327,EuroCOVIDhub-baseline,2
+FR,2021-07-03,Deaths,186,France,2021-06-28,214,EuroCOVIDhub-baseline,1
+FR,2021-07-03,Deaths,186,France,2021-06-14,522,UMass-MechBayes,3
+FR,2021-07-03,Deaths,186,France,2021-06-21,309,UMass-MechBayes,2
+FR,2021-07-03,Deaths,186,France,2021-06-28,204,UMass-MechBayes,1
+FR,2021-07-03,Deaths,186,France,2021-06-21,145,epiforecasts-EpiNow2,2
+FR,2021-07-03,Deaths,186,France,2021-06-28,128,epiforecasts-EpiNow2,1
+FR,2021-07-10,Cases,22628,France,2021-06-21,6994,EuroCOVIDhub-ensemble,3
+FR,2021-07-10,Cases,22628,France,2021-06-28,5675,EuroCOVIDhub-ensemble,2
+FR,2021-07-10,Cases,22628,France,2021-07-05,12410,EuroCOVIDhub-ensemble,1
+FR,2021-07-10,Cases,22628,France,2021-06-21,15577,EuroCOVIDhub-baseline,3
+FR,2021-07-10,Cases,22628,France,2021-06-28,10765,EuroCOVIDhub-baseline,2
+FR,2021-07-10,Cases,22628,France,2021-07-05,13336,EuroCOVIDhub-baseline,1
+FR,2021-07-10,Cases,22628,France,2021-06-21,5940,epiforecasts-EpiNow2,3
+FR,2021-07-10,Cases,22628,France,2021-06-28,4980,epiforecasts-EpiNow2,2
+FR,2021-07-10,Cases,22628,France,2021-07-05,8803,epiforecasts-EpiNow2,1
+FR,2021-07-10,Deaths,149,France,2021-06-21,145,EuroCOVIDhub-ensemble,3
+FR,2021-07-10,Deaths,149,France,2021-06-28,124,EuroCOVIDhub-ensemble,2
+FR,2021-07-10,Deaths,149,France,2021-07-05,147,EuroCOVIDhub-ensemble,1
+FR,2021-07-10,Deaths,149,France,2021-06-21,327,EuroCOVIDhub-baseline,3
+FR,2021-07-10,Deaths,149,France,2021-06-28,214,EuroCOVIDhub-baseline,2
+FR,2021-07-10,Deaths,149,France,2021-07-05,186,EuroCOVIDhub-baseline,1
+FR,2021-07-10,Deaths,149,France,2021-06-21,330,UMass-MechBayes,3
+FR,2021-07-10,Deaths,149,France,2021-06-28,174,UMass-MechBayes,2
+FR,2021-07-10,Deaths,149,France,2021-07-05,170,UMass-MechBayes,1
+FR,2021-07-10,Deaths,149,France,2021-06-21,94,epiforecasts-EpiNow2,3
+FR,2021-07-10,Deaths,149,France,2021-06-28,83,epiforecasts-EpiNow2,2
+FR,2021-07-10,Deaths,149,France,2021-07-05,123,epiforecasts-EpiNow2,1
+FR,2021-07-17,Cases,44321,France,2021-06-28,4612,EuroCOVIDhub-ensemble,3
+FR,2021-07-17,Cases,44321,France,2021-07-05,12763,EuroCOVIDhub-ensemble,2
+FR,2021-07-17,Cases,44321,France,2021-07-12,29812,EuroCOVIDhub-ensemble,1
+FR,2021-07-17,Cases,44321,France,2021-06-28,10765,EuroCOVIDhub-baseline,3
+FR,2021-07-17,Cases,44321,France,2021-07-05,13336,EuroCOVIDhub-baseline,2
+FR,2021-07-17,Cases,44321,France,2021-07-12,22628,EuroCOVIDhub-baseline,1
+FR,2021-07-17,Cases,44321,France,2021-06-28,3373,epiforecasts-EpiNow2,3
+FR,2021-07-17,Cases,44321,France,2021-07-05,6791,epiforecasts-EpiNow2,2
+FR,2021-07-17,Cases,44321,France,2021-07-12,29129,epiforecasts-EpiNow2,1
+FR,2021-07-17,Deaths,123,France,2021-06-28,90,EuroCOVIDhub-ensemble,3
+FR,2021-07-17,Deaths,123,France,2021-07-05,121,EuroCOVIDhub-ensemble,2
+FR,2021-07-17,Deaths,123,France,2021-07-12,155,EuroCOVIDhub-ensemble,1
+FR,2021-07-17,Deaths,123,France,2021-06-28,214,EuroCOVIDhub-baseline,3
+FR,2021-07-17,Deaths,123,France,2021-07-05,186,EuroCOVIDhub-baseline,2
+FR,2021-07-17,Deaths,123,France,2021-07-12,149,EuroCOVIDhub-baseline,1
+FR,2021-07-17,Deaths,123,France,2021-06-28,147,UMass-MechBayes,3
+FR,2021-07-17,Deaths,123,France,2021-07-05,150,UMass-MechBayes,2
+FR,2021-07-17,Deaths,123,France,2021-07-12,168,UMass-MechBayes,1
+FR,2021-07-17,Deaths,123,France,2021-06-28,58,epiforecasts-EpiNow2,3
+FR,2021-07-17,Deaths,123,France,2021-07-05,98,epiforecasts-EpiNow2,2
+FR,2021-07-17,Deaths,123,France,2021-07-12,222,epiforecasts-EpiNow2,1
+FR,2021-07-24,Cases,119095,France,2021-07-05,13239,EuroCOVIDhub-ensemble,3
+FR,2021-07-24,Cases,119095,France,2021-07-12,43360,EuroCOVIDhub-ensemble,2
+FR,2021-07-24,Cases,119095,France,2021-07-05,13336,EuroCOVIDhub-baseline,3
+FR,2021-07-24,Cases,119095,France,2021-07-12,22628,EuroCOVIDhub-baseline,2
+FR,2021-07-24,Cases,119095,France,2021-07-05,5118,epiforecasts-EpiNow2,3
+FR,2021-07-24,Cases,119095,France,2021-07-12,45159,epiforecasts-EpiNow2,2
+FR,2021-07-24,Deaths,125,France,2021-07-05,107,EuroCOVIDhub-ensemble,3
+FR,2021-07-24,Deaths,125,France,2021-07-12,178,EuroCOVIDhub-ensemble,2
+FR,2021-07-24,Deaths,125,France,2021-07-05,186,EuroCOVIDhub-baseline,3
+FR,2021-07-24,Deaths,125,France,2021-07-12,149,EuroCOVIDhub-baseline,2
+FR,2021-07-24,Deaths,125,France,2021-07-05,129,UMass-MechBayes,3
+FR,2021-07-24,Deaths,125,France,2021-07-12,179,UMass-MechBayes,2
+FR,2021-07-24,Deaths,125,France,2021-07-05,78,epiforecasts-EpiNow2,3
+FR,2021-07-24,Deaths,125,France,2021-07-12,298,epiforecasts-EpiNow2,2
+GB,2021-05-08,Cases,14560,United Kingdom,2021-05-03,12117,EuroCOVIDhub-ensemble,1
+GB,2021-05-08,Cases,14560,United Kingdom,2021-05-03,15360,EuroCOVIDhub-baseline,1
+GB,2021-05-08,Cases,14560,United Kingdom,2021-05-03,12863,epiforecasts-EpiNow2,1
+GB,2021-05-08,Deaths,79,United Kingdom,2021-05-03,102,EuroCOVIDhub-ensemble,1
+GB,2021-05-08,Deaths,79,United Kingdom,2021-05-03,107,EuroCOVIDhub-baseline,1
+GB,2021-05-08,Deaths,79,United Kingdom,2021-05-03,106,UMass-MechBayes,1
+GB,2021-05-08,Deaths,79,United Kingdom,2021-05-03,116,epiforecasts-EpiNow2,1
+GB,2021-05-15,Cases,15761,United Kingdom,2021-05-03,11434,EuroCOVIDhub-ensemble,2
+GB,2021-05-15,Cases,15761,United Kingdom,2021-05-10,13746,EuroCOVIDhub-ensemble,1
+GB,2021-05-15,Cases,15761,United Kingdom,2021-05-03,15360,EuroCOVIDhub-baseline,2
+GB,2021-05-15,Cases,15761,United Kingdom,2021-05-10,14560,EuroCOVIDhub-baseline,1
+GB,2021-05-15,Cases,15761,United Kingdom,2021-05-03,11216,epiforecasts-EpiNow2,2
+GB,2021-05-15,Cases,15761,United Kingdom,2021-05-10,12537,epiforecasts-EpiNow2,1
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-03,92,EuroCOVIDhub-ensemble,2
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-10,79,EuroCOVIDhub-ensemble,1
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-03,107,EuroCOVIDhub-baseline,2
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-10,79,EuroCOVIDhub-baseline,1
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-03,93,UMass-MechBayes,2
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-10,81,UMass-MechBayes,1
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-03,109,epiforecasts-EpiNow2,2
+GB,2021-05-15,Deaths,72,United Kingdom,2021-05-10,100,epiforecasts-EpiNow2,1
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-03,10969,EuroCOVIDhub-ensemble,3
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-10,13396,EuroCOVIDhub-ensemble,2
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-17,14877,EuroCOVIDhub-ensemble,1
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-03,15360,EuroCOVIDhub-baseline,3
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-10,14560,EuroCOVIDhub-baseline,2
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-17,15761,EuroCOVIDhub-baseline,1
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-03,9783,epiforecasts-EpiNow2,3
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-10,11407,epiforecasts-EpiNow2,2
+GB,2021-05-22,Cases,11595,United Kingdom,2021-05-17,14814,epiforecasts-EpiNow2,1
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-03,83,EuroCOVIDhub-ensemble,3
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-10,70,EuroCOVIDhub-ensemble,2
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-17,68,EuroCOVIDhub-ensemble,1
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-03,107,EuroCOVIDhub-baseline,3
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-10,79,EuroCOVIDhub-baseline,2
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-17,72,EuroCOVIDhub-baseline,1
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-03,80,UMass-MechBayes,3
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-10,73,UMass-MechBayes,2
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-17,76,UMass-MechBayes,1
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-03,90,epiforecasts-EpiNow2,3
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-10,92,epiforecasts-EpiNow2,2
+GB,2021-05-22,Deaths,41,United Kingdom,2021-05-17,70,epiforecasts-EpiNow2,1
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-10,13166,EuroCOVIDhub-ensemble,3
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-17,15027,EuroCOVIDhub-ensemble,2
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-24,13528,EuroCOVIDhub-ensemble,1
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-10,14560,EuroCOVIDhub-baseline,3
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-17,15761,EuroCOVIDhub-baseline,2
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-24,11595,EuroCOVIDhub-baseline,1
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-10,10407,epiforecasts-EpiNow2,3
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-17,14565,epiforecasts-EpiNow2,2
+GB,2021-05-29,Cases,20499,United Kingdom,2021-05-24,13427,epiforecasts-EpiNow2,1
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-10,64,EuroCOVIDhub-ensemble,3
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-17,67,EuroCOVIDhub-ensemble,2
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-24,50,EuroCOVIDhub-ensemble,1
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-10,79,EuroCOVIDhub-baseline,3
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-17,72,EuroCOVIDhub-baseline,2
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-24,41,EuroCOVIDhub-baseline,1
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-10,65,UMass-MechBayes,3
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-17,73,UMass-MechBayes,2
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-24,58,UMass-MechBayes,1
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-10,85,epiforecasts-EpiNow2,3
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-17,76,epiforecasts-EpiNow2,2
+GB,2021-05-29,Deaths,59,United Kingdom,2021-05-24,59,epiforecasts-EpiNow2,1
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-17,15178,EuroCOVIDhub-ensemble,3
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-24,13388,EuroCOVIDhub-ensemble,2
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-31,22045,EuroCOVIDhub-ensemble,1
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-17,15761,EuroCOVIDhub-baseline,3
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-24,11595,EuroCOVIDhub-baseline,2
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-31,20499,EuroCOVIDhub-baseline,1
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-17,14439,epiforecasts-EpiNow2,3
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-24,12977,epiforecasts-EpiNow2,2
+GB,2021-06-05,Cases,30724,United Kingdom,2021-05-31,21125,epiforecasts-EpiNow2,1
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-17,65,EuroCOVIDhub-ensemble,3
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-24,46,EuroCOVIDhub-ensemble,2
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-31,65,EuroCOVIDhub-ensemble,1
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-17,72,EuroCOVIDhub-baseline,3
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-24,41,EuroCOVIDhub-baseline,2
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-31,59,EuroCOVIDhub-baseline,1
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-17,72,UMass-MechBayes,3
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-24,56,UMass-MechBayes,2
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-31,74,UMass-MechBayes,1
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-17,74,epiforecasts-EpiNow2,3
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-24,59,epiforecasts-EpiNow2,2
+GB,2021-06-05,Deaths,61,United Kingdom,2021-05-31,65,epiforecasts-EpiNow2,1
+GB,2021-06-12,Cases,46825,United Kingdom,2021-05-24,13374,EuroCOVIDhub-ensemble,3
+GB,2021-06-12,Cases,46825,United Kingdom,2021-05-31,24948,EuroCOVIDhub-ensemble,2
+GB,2021-06-12,Cases,46825,United Kingdom,2021-06-07,41331,EuroCOVIDhub-ensemble,1
+GB,2021-06-12,Cases,46825,United Kingdom,2021-05-24,11595,EuroCOVIDhub-baseline,3
+GB,2021-06-12,Cases,46825,United Kingdom,2021-05-31,20499,EuroCOVIDhub-baseline,2
+GB,2021-06-12,Cases,46825,United Kingdom,2021-06-07,30724,EuroCOVIDhub-baseline,1
+GB,2021-06-12,Cases,46825,United Kingdom,2021-05-24,12002,epiforecasts-EpiNow2,3
+GB,2021-06-12,Cases,46825,United Kingdom,2021-05-31,25005,epiforecasts-EpiNow2,2
+GB,2021-06-12,Cases,46825,United Kingdom,2021-06-07,40352,epiforecasts-EpiNow2,1
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-24,42,EuroCOVIDhub-ensemble,3
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-31,74,EuroCOVIDhub-ensemble,2
+GB,2021-06-12,Deaths,60,United Kingdom,2021-06-07,80,EuroCOVIDhub-ensemble,1
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-24,41,EuroCOVIDhub-baseline,3
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-31,59,EuroCOVIDhub-baseline,2
+GB,2021-06-12,Deaths,60,United Kingdom,2021-06-07,61,EuroCOVIDhub-baseline,1
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-24,52,UMass-MechBayes,3
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-31,97,UMass-MechBayes,2
+GB,2021-06-12,Deaths,60,United Kingdom,2021-06-07,97,UMass-MechBayes,1
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-24,56,epiforecasts-EpiNow2,3
+GB,2021-06-12,Deaths,60,United Kingdom,2021-05-31,71,epiforecasts-EpiNow2,2
+GB,2021-06-12,Deaths,60,United Kingdom,2021-06-07,83,epiforecasts-EpiNow2,1
+GB,2021-06-19,Cases,62474,United Kingdom,2021-05-31,27561,EuroCOVIDhub-ensemble,3
+GB,2021-06-19,Cases,62474,United Kingdom,2021-06-07,55670,EuroCOVIDhub-ensemble,2
+GB,2021-06-19,Cases,62474,United Kingdom,2021-06-14,61183,EuroCOVIDhub-ensemble,1
+GB,2021-06-19,Cases,62474,United Kingdom,2021-05-31,20499,EuroCOVIDhub-baseline,3
+GB,2021-06-19,Cases,62474,United Kingdom,2021-06-07,30724,EuroCOVIDhub-baseline,2
+GB,2021-06-19,Cases,62474,United Kingdom,2021-06-14,46825,EuroCOVIDhub-baseline,1
+GB,2021-06-19,Cases,62474,United Kingdom,2021-05-31,27431,epiforecasts-EpiNow2,3
+GB,2021-06-19,Cases,62474,United Kingdom,2021-06-07,55990,epiforecasts-EpiNow2,2
+GB,2021-06-19,Cases,62474,United Kingdom,2021-06-14,69574,epiforecasts-EpiNow2,1
+GB,2021-06-19,Deaths,74,United Kingdom,2021-05-31,83,EuroCOVIDhub-ensemble,3
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-07,108,EuroCOVIDhub-ensemble,2
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-14,92,EuroCOVIDhub-ensemble,1
+GB,2021-06-19,Deaths,74,United Kingdom,2021-05-31,59,EuroCOVIDhub-baseline,3
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-07,61,EuroCOVIDhub-baseline,2
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-14,60,EuroCOVIDhub-baseline,1
+GB,2021-06-19,Deaths,74,United Kingdom,2021-05-31,132,UMass-MechBayes,3
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-07,148,UMass-MechBayes,2
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-14,115,UMass-MechBayes,1
+GB,2021-06-19,Deaths,74,United Kingdom,2021-05-31,82,epiforecasts-EpiNow2,3
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-07,112,epiforecasts-EpiNow2,2
+GB,2021-06-19,Deaths,74,United Kingdom,2021-06-14,111,epiforecasts-EpiNow2,1
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-07,72914,EuroCOVIDhub-ensemble,3
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-14,79562,EuroCOVIDhub-ensemble,2
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-21,78282,EuroCOVIDhub-ensemble,1
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-07,30724,EuroCOVIDhub-baseline,3
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-14,46825,EuroCOVIDhub-baseline,2
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-21,62474,EuroCOVIDhub-baseline,1
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-07,74716,epiforecasts-EpiNow2,3
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-14,101006,epiforecasts-EpiNow2,2
+GB,2021-06-26,Cases,96843,United Kingdom,2021-06-21,95003,epiforecasts-EpiNow2,1
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-07,144,EuroCOVIDhub-ensemble,3
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-14,124,EuroCOVIDhub-ensemble,2
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-21,106,EuroCOVIDhub-ensemble,1
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-07,61,EuroCOVIDhub-baseline,3
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-14,60,EuroCOVIDhub-baseline,2
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-21,74,EuroCOVIDhub-baseline,1
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-07,228,UMass-MechBayes,3
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-14,172,UMass-MechBayes,2
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-21,132,UMass-MechBayes,1
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-07,152,epiforecasts-EpiNow2,3
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-14,164,epiforecasts-EpiNow2,2
+GB,2021-06-26,Deaths,119,United Kingdom,2021-06-21,130,epiforecasts-EpiNow2,1
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-14,99014,EuroCOVIDhub-ensemble,3
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-21,97137,EuroCOVIDhub-ensemble,2
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-28,123249,EuroCOVIDhub-ensemble,1
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-14,46825,EuroCOVIDhub-baseline,3
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-21,62474,EuroCOVIDhub-baseline,2
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-28,96843,EuroCOVIDhub-baseline,1
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-14,137512,epiforecasts-EpiNow2,3
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-21,132489,epiforecasts-EpiNow2,2
+GB,2021-07-03,Cases,161805,United Kingdom,2021-06-28,143325,epiforecasts-EpiNow2,1
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-14,162,EuroCOVIDhub-ensemble,3
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-21,138,EuroCOVIDhub-ensemble,2
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-28,161,EuroCOVIDhub-ensemble,1
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-14,60,EuroCOVIDhub-baseline,3
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-21,74,EuroCOVIDhub-baseline,2
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-28,119,EuroCOVIDhub-baseline,1
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-14,250,UMass-MechBayes,3
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-21,178,UMass-MechBayes,2
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-28,200,UMass-MechBayes,1
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-14,238,epiforecasts-EpiNow2,3
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-21,196,epiforecasts-EpiNow2,2
+GB,2021-07-03,Deaths,118,United Kingdom,2021-06-28,176,epiforecasts-EpiNow2,1
+GB,2021-07-10,Cases,210277,United Kingdom,2021-06-21,114423,EuroCOVIDhub-ensemble,3
+GB,2021-07-10,Cases,210277,United Kingdom,2021-06-28,160068,EuroCOVIDhub-ensemble,2
+GB,2021-07-10,Cases,210277,United Kingdom,2021-07-05,208179,EuroCOVIDhub-ensemble,1
+GB,2021-07-10,Cases,210277,United Kingdom,2021-06-21,62474,EuroCOVIDhub-baseline,3
+GB,2021-07-10,Cases,210277,United Kingdom,2021-06-28,96843,EuroCOVIDhub-baseline,2
+GB,2021-07-10,Cases,210277,United Kingdom,2021-07-05,161805,EuroCOVIDhub-baseline,1
+GB,2021-07-10,Cases,210277,United Kingdom,2021-06-21,163085,epiforecasts-EpiNow2,3
+GB,2021-07-10,Cases,210277,United Kingdom,2021-06-28,199324,epiforecasts-EpiNow2,2
+GB,2021-07-10,Cases,210277,United Kingdom,2021-07-05,246369,epiforecasts-EpiNow2,1
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-21,174,EuroCOVIDhub-ensemble,3
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-28,222,EuroCOVIDhub-ensemble,2
+GB,2021-07-10,Deaths,192,United Kingdom,2021-07-05,188,EuroCOVIDhub-ensemble,1
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-21,74,EuroCOVIDhub-baseline,3
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-28,119,EuroCOVIDhub-baseline,2
+GB,2021-07-10,Deaths,192,United Kingdom,2021-07-05,118,EuroCOVIDhub-baseline,1
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-21,240,UMass-MechBayes,3
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-28,297,UMass-MechBayes,2
+GB,2021-07-10,Deaths,192,United Kingdom,2021-07-05,266,UMass-MechBayes,1
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-21,280,epiforecasts-EpiNow2,3
+GB,2021-07-10,Deaths,192,United Kingdom,2021-06-28,260,epiforecasts-EpiNow2,2
+GB,2021-07-10,Deaths,192,United Kingdom,2021-07-05,237,epiforecasts-EpiNow2,1
+GB,2021-07-17,Cases,296447,United Kingdom,2021-06-28,197074,EuroCOVIDhub-ensemble,3
+GB,2021-07-17,Cases,296447,United Kingdom,2021-07-05,289563,EuroCOVIDhub-ensemble,2
+GB,2021-07-17,Cases,296447,United Kingdom,2021-07-12,261811,EuroCOVIDhub-ensemble,1
+GB,2021-07-17,Cases,296447,United Kingdom,2021-06-28,96843,EuroCOVIDhub-baseline,3
+GB,2021-07-17,Cases,296447,United Kingdom,2021-07-05,161805,EuroCOVIDhub-baseline,2
+GB,2021-07-17,Cases,296447,United Kingdom,2021-07-12,210277,EuroCOVIDhub-baseline,1
+GB,2021-07-17,Cases,296447,United Kingdom,2021-06-28,228893,epiforecasts-EpiNow2,3
+GB,2021-07-17,Cases,296447,United Kingdom,2021-07-05,361198,epiforecasts-EpiNow2,2
+GB,2021-07-17,Cases,296447,United Kingdom,2021-07-12,312863,epiforecasts-EpiNow2,1
+GB,2021-07-17,Deaths,284,United Kingdom,2021-06-28,300,EuroCOVIDhub-ensemble,3
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-05,266,EuroCOVIDhub-ensemble,2
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-12,260,EuroCOVIDhub-ensemble,1
+GB,2021-07-17,Deaths,284,United Kingdom,2021-06-28,119,EuroCOVIDhub-baseline,3
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-05,118,EuroCOVIDhub-baseline,2
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-12,192,EuroCOVIDhub-baseline,1
+GB,2021-07-17,Deaths,284,United Kingdom,2021-06-28,442,UMass-MechBayes,3
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-05,406,UMass-MechBayes,2
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-12,382,UMass-MechBayes,1
+GB,2021-07-17,Deaths,284,United Kingdom,2021-06-28,378,epiforecasts-EpiNow2,3
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-05,368,epiforecasts-EpiNow2,2
+GB,2021-07-17,Deaths,284,United Kingdom,2021-07-12,321,epiforecasts-EpiNow2,1
+GB,2021-07-24,Cases,282920,United Kingdom,2021-07-05,392979,EuroCOVIDhub-ensemble,3
+GB,2021-07-24,Cases,282920,United Kingdom,2021-07-12,323891,EuroCOVIDhub-ensemble,2
+GB,2021-07-24,Cases,282920,United Kingdom,2021-07-05,161805,EuroCOVIDhub-baseline,3
+GB,2021-07-24,Cases,282920,United Kingdom,2021-07-12,210277,EuroCOVIDhub-baseline,2
+GB,2021-07-24,Cases,282920,United Kingdom,2021-07-05,504779,epiforecasts-EpiNow2,3
+GB,2021-07-24,Cases,282920,United Kingdom,2021-07-12,417561,epiforecasts-EpiNow2,2
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-05,376,EuroCOVIDhub-ensemble,3
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-12,349,EuroCOVIDhub-ensemble,2
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-05,118,EuroCOVIDhub-baseline,3
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-12,192,EuroCOVIDhub-baseline,2
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-05,600,UMass-MechBayes,3
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-12,543,UMass-MechBayes,2
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-05,558,epiforecasts-EpiNow2,3
+GB,2021-07-24,Deaths,447,United Kingdom,2021-07-12,461,epiforecasts-EpiNow2,2
+IT,2021-05-08,Cases,67304,Italy,2021-05-03,79197,EuroCOVIDhub-ensemble,1
+IT,2021-05-08,Cases,67304,Italy,2021-05-03,86100,EuroCOVIDhub-baseline,1
+IT,2021-05-08,Cases,67304,Italy,2021-05-03,77982,epiforecasts-EpiNow2,1
+IT,2021-05-08,Deaths,1661,Italy,2021-05-03,1727,EuroCOVIDhub-ensemble,1
+IT,2021-05-08,Deaths,1661,Italy,2021-05-03,2012,EuroCOVIDhub-baseline,1
+IT,2021-05-08,Deaths,1661,Italy,2021-05-03,1605,UMass-MechBayes,1
+IT,2021-05-08,Deaths,1661,Italy,2021-05-03,1924,epiforecasts-EpiNow2,1
+IT,2021-05-15,Cases,50453,Italy,2021-05-03,74933,EuroCOVIDhub-ensemble,2
+IT,2021-05-15,Cases,50453,Italy,2021-05-10,56809,EuroCOVIDhub-ensemble,1
+IT,2021-05-15,Cases,50453,Italy,2021-05-03,86100,EuroCOVIDhub-baseline,2
+IT,2021-05-15,Cases,50453,Italy,2021-05-10,67304,EuroCOVIDhub-baseline,1
+IT,2021-05-15,Cases,50453,Italy,2021-05-03,70042,epiforecasts-EpiNow2,2
+IT,2021-05-15,Cases,50453,Italy,2021-05-10,55360,epiforecasts-EpiNow2,1
+IT,2021-05-15,Deaths,1369,Italy,2021-05-03,1512,EuroCOVIDhub-ensemble,2
+IT,2021-05-15,Deaths,1369,Italy,2021-05-10,1436,EuroCOVIDhub-ensemble,1
+IT,2021-05-15,Deaths,1369,Italy,2021-05-03,2012,EuroCOVIDhub-baseline,2
+IT,2021-05-15,Deaths,1369,Italy,2021-05-10,1661,EuroCOVIDhub-baseline,1
+IT,2021-05-15,Deaths,1369,Italy,2021-05-03,1326,UMass-MechBayes,2
+IT,2021-05-15,Deaths,1369,Italy,2021-05-10,1341,UMass-MechBayes,1
+IT,2021-05-15,Deaths,1369,Italy,2021-05-03,1773,epiforecasts-EpiNow2,2
+IT,2021-05-15,Deaths,1369,Italy,2021-05-10,1485,epiforecasts-EpiNow2,1
+IT,2021-05-22,Cases,34816,Italy,2021-05-03,71881,EuroCOVIDhub-ensemble,3
+IT,2021-05-22,Cases,34816,Italy,2021-05-10,47316,EuroCOVIDhub-ensemble,2
+IT,2021-05-22,Cases,34816,Italy,2021-05-17,41367,EuroCOVIDhub-ensemble,1
+IT,2021-05-22,Cases,34816,Italy,2021-05-03,86100,EuroCOVIDhub-baseline,3
+IT,2021-05-22,Cases,34816,Italy,2021-05-10,67304,EuroCOVIDhub-baseline,2
+IT,2021-05-22,Cases,34816,Italy,2021-05-17,50453,EuroCOVIDhub-baseline,1
+IT,2021-05-22,Cases,34816,Italy,2021-05-03,62441,epiforecasts-EpiNow2,3
+IT,2021-05-22,Cases,34816,Italy,2021-05-10,43576,epiforecasts-EpiNow2,2
+IT,2021-05-22,Cases,34816,Italy,2021-05-17,35123,epiforecasts-EpiNow2,1
+IT,2021-05-22,Deaths,1090,Italy,2021-05-03,1340,EuroCOVIDhub-ensemble,3
+IT,2021-05-22,Deaths,1090,Italy,2021-05-10,1221,EuroCOVIDhub-ensemble,2
+IT,2021-05-22,Deaths,1090,Italy,2021-05-17,1071,EuroCOVIDhub-ensemble,1
+IT,2021-05-22,Deaths,1090,Italy,2021-05-03,2012,EuroCOVIDhub-baseline,3
+IT,2021-05-22,Deaths,1090,Italy,2021-05-10,1661,EuroCOVIDhub-baseline,2
+IT,2021-05-22,Deaths,1090,Italy,2021-05-17,1369,EuroCOVIDhub-baseline,1
+IT,2021-05-22,Deaths,1090,Italy,2021-05-03,1078,UMass-MechBayes,3
+IT,2021-05-22,Deaths,1090,Italy,2021-05-10,1108,UMass-MechBayes,2
+IT,2021-05-22,Deaths,1090,Italy,2021-05-17,1006,UMass-MechBayes,1
+IT,2021-05-22,Deaths,1090,Italy,2021-05-03,1600,epiforecasts-EpiNow2,3
+IT,2021-05-22,Deaths,1090,Italy,2021-05-10,1221,epiforecasts-EpiNow2,2
+IT,2021-05-22,Deaths,1090,Italy,2021-05-17,957,epiforecasts-EpiNow2,1
+IT,2021-05-29,Cases,24865,Italy,2021-05-10,41124,EuroCOVIDhub-ensemble,3
+IT,2021-05-29,Cases,24865,Italy,2021-05-17,32814,EuroCOVIDhub-ensemble,2
+IT,2021-05-29,Cases,24865,Italy,2021-05-24,28395,EuroCOVIDhub-ensemble,1
+IT,2021-05-29,Cases,24865,Italy,2021-05-10,67304,EuroCOVIDhub-baseline,3
+IT,2021-05-29,Cases,24865,Italy,2021-05-17,50453,EuroCOVIDhub-baseline,2
+IT,2021-05-29,Cases,24865,Italy,2021-05-24,34816,EuroCOVIDhub-baseline,1
+IT,2021-05-29,Cases,24865,Italy,2021-05-10,34078,epiforecasts-EpiNow2,3
+IT,2021-05-29,Cases,24865,Italy,2021-05-17,23532,epiforecasts-EpiNow2,2
+IT,2021-05-29,Cases,24865,Italy,2021-05-24,23145,epiforecasts-EpiNow2,1
+IT,2021-05-29,Deaths,849,Italy,2021-05-10,1036,EuroCOVIDhub-ensemble,3
+IT,2021-05-29,Deaths,849,Italy,2021-05-17,847,EuroCOVIDhub-ensemble,2
+IT,2021-05-29,Deaths,849,Italy,2021-05-24,861,EuroCOVIDhub-ensemble,1
+IT,2021-05-29,Deaths,849,Italy,2021-05-10,1661,EuroCOVIDhub-baseline,3
+IT,2021-05-29,Deaths,849,Italy,2021-05-17,1369,EuroCOVIDhub-baseline,2
+IT,2021-05-29,Deaths,849,Italy,2021-05-24,1090,EuroCOVIDhub-baseline,1
+IT,2021-05-29,Deaths,849,Italy,2021-05-10,900,UMass-MechBayes,3
+IT,2021-05-29,Deaths,849,Italy,2021-05-17,765,UMass-MechBayes,2
+IT,2021-05-29,Deaths,849,Italy,2021-05-24,796,UMass-MechBayes,1
+IT,2021-05-29,Deaths,849,Italy,2021-05-10,990,epiforecasts-EpiNow2,3
+IT,2021-05-29,Deaths,849,Italy,2021-05-17,687,epiforecasts-EpiNow2,2
+IT,2021-05-29,Deaths,849,Italy,2021-05-24,801,epiforecasts-EpiNow2,1
+IT,2021-06-05,Cases,17098,Italy,2021-05-17,27080,EuroCOVIDhub-ensemble,3
+IT,2021-06-05,Cases,17098,Italy,2021-05-24,21468,EuroCOVIDhub-ensemble,2
+IT,2021-06-05,Cases,17098,Italy,2021-05-31,20992,EuroCOVIDhub-ensemble,1
+IT,2021-06-05,Cases,17098,Italy,2021-05-17,50453,EuroCOVIDhub-baseline,3
+IT,2021-06-05,Cases,17098,Italy,2021-05-24,34816,EuroCOVIDhub-baseline,2
+IT,2021-06-05,Cases,17098,Italy,2021-05-31,24865,EuroCOVIDhub-baseline,1
+IT,2021-06-05,Cases,17098,Italy,2021-05-17,15452,epiforecasts-EpiNow2,3
+IT,2021-06-05,Cases,17098,Italy,2021-05-24,15133,epiforecasts-EpiNow2,2
+IT,2021-06-05,Cases,17098,Italy,2021-05-31,17267,epiforecasts-EpiNow2,1
+IT,2021-06-05,Deaths,470,Italy,2021-05-17,667,EuroCOVIDhub-ensemble,3
+IT,2021-06-05,Deaths,470,Italy,2021-05-24,670,EuroCOVIDhub-ensemble,2
+IT,2021-06-05,Deaths,470,Italy,2021-05-31,624,EuroCOVIDhub-ensemble,1
+IT,2021-06-05,Deaths,470,Italy,2021-05-17,1369,EuroCOVIDhub-baseline,3
+IT,2021-06-05,Deaths,470,Italy,2021-05-24,1090,EuroCOVIDhub-baseline,2
+IT,2021-06-05,Deaths,470,Italy,2021-05-31,849,EuroCOVIDhub-baseline,1
+IT,2021-06-05,Deaths,470,Italy,2021-05-17,566,UMass-MechBayes,3
+IT,2021-06-05,Deaths,470,Italy,2021-05-24,588,UMass-MechBayes,2
+IT,2021-06-05,Deaths,470,Italy,2021-05-31,565,UMass-MechBayes,1
+IT,2021-06-05,Deaths,470,Italy,2021-05-17,447,epiforecasts-EpiNow2,3
+IT,2021-06-05,Deaths,470,Italy,2021-05-24,556,epiforecasts-EpiNow2,2
+IT,2021-06-05,Deaths,470,Italy,2021-05-31,556,epiforecasts-EpiNow2,1
+IT,2021-06-12,Cases,13329,Italy,2021-05-24,17352,EuroCOVIDhub-ensemble,3
+IT,2021-06-12,Cases,13329,Italy,2021-05-31,15811,EuroCOVIDhub-ensemble,2
+IT,2021-06-12,Cases,13329,Italy,2021-06-07,13292,EuroCOVIDhub-ensemble,1
+IT,2021-06-12,Cases,13329,Italy,2021-05-24,34816,EuroCOVIDhub-baseline,3
+IT,2021-06-12,Cases,13329,Italy,2021-05-31,24865,EuroCOVIDhub-baseline,2
+IT,2021-06-12,Cases,13329,Italy,2021-06-07,17098,EuroCOVIDhub-baseline,1
+IT,2021-06-12,Cases,13329,Italy,2021-05-24,9839,epiforecasts-EpiNow2,3
+IT,2021-06-12,Cases,13329,Italy,2021-05-31,12050,epiforecasts-EpiNow2,2
+IT,2021-06-12,Cases,13329,Italy,2021-06-07,11569,epiforecasts-EpiNow2,1
+IT,2021-06-12,Deaths,504,Italy,2021-05-24,521,EuroCOVIDhub-ensemble,3
+IT,2021-06-12,Deaths,504,Italy,2021-05-31,474,EuroCOVIDhub-ensemble,2
+IT,2021-06-12,Deaths,504,Italy,2021-06-07,376,EuroCOVIDhub-ensemble,1
+IT,2021-06-12,Deaths,504,Italy,2021-05-24,1090,EuroCOVIDhub-baseline,3
+IT,2021-06-12,Deaths,504,Italy,2021-05-31,849,EuroCOVIDhub-baseline,2
+IT,2021-06-12,Deaths,504,Italy,2021-06-07,470,EuroCOVIDhub-baseline,1
+IT,2021-06-12,Deaths,504,Italy,2021-05-24,423,UMass-MechBayes,3
+IT,2021-06-12,Deaths,504,Italy,2021-05-31,400,UMass-MechBayes,2
+IT,2021-06-12,Deaths,504,Italy,2021-06-07,369,UMass-MechBayes,1
+IT,2021-06-12,Deaths,504,Italy,2021-05-24,372,epiforecasts-EpiNow2,3
+IT,2021-06-12,Deaths,504,Italy,2021-05-31,400,epiforecasts-EpiNow2,2
+IT,2021-06-12,Deaths,504,Italy,2021-06-07,381,epiforecasts-EpiNow2,1
+IT,2021-06-19,Cases,8613,Italy,2021-05-31,12162,EuroCOVIDhub-ensemble,3
+IT,2021-06-19,Cases,8613,Italy,2021-06-07,9144,EuroCOVIDhub-ensemble,2
+IT,2021-06-19,Cases,8613,Italy,2021-06-14,10291,EuroCOVIDhub-ensemble,1
+IT,2021-06-19,Cases,8613,Italy,2021-05-31,24865,EuroCOVIDhub-baseline,3
+IT,2021-06-19,Cases,8613,Italy,2021-06-07,17098,EuroCOVIDhub-baseline,2
+IT,2021-06-19,Cases,8613,Italy,2021-06-14,13329,EuroCOVIDhub-baseline,1
+IT,2021-06-19,Cases,8613,Italy,2021-05-31,8308,epiforecasts-EpiNow2,3
+IT,2021-06-19,Cases,8613,Italy,2021-06-07,7800,epiforecasts-EpiNow2,2
+IT,2021-06-19,Cases,8613,Italy,2021-06-14,9634,epiforecasts-EpiNow2,1
+IT,2021-06-19,Deaths,277,Italy,2021-05-31,367,EuroCOVIDhub-ensemble,3
+IT,2021-06-19,Deaths,277,Italy,2021-06-07,259,EuroCOVIDhub-ensemble,2
+IT,2021-06-19,Deaths,277,Italy,2021-06-14,341,EuroCOVIDhub-ensemble,1
+IT,2021-06-19,Deaths,277,Italy,2021-05-31,849,EuroCOVIDhub-baseline,3
+IT,2021-06-19,Deaths,277,Italy,2021-06-07,470,EuroCOVIDhub-baseline,2
+IT,2021-06-19,Deaths,277,Italy,2021-06-14,504,EuroCOVIDhub-baseline,1
+IT,2021-06-19,Deaths,277,Italy,2021-05-31,278,UMass-MechBayes,3
+IT,2021-06-19,Deaths,277,Italy,2021-06-07,256,UMass-MechBayes,2
+IT,2021-06-19,Deaths,277,Italy,2021-06-14,297,UMass-MechBayes,1
+IT,2021-06-19,Deaths,277,Italy,2021-05-31,278,epiforecasts-EpiNow2,3
+IT,2021-06-19,Deaths,277,Italy,2021-06-07,266,epiforecasts-EpiNow2,2
+IT,2021-06-19,Deaths,277,Italy,2021-06-14,304,epiforecasts-EpiNow2,1
+IT,2021-06-26,Cases,5194,Italy,2021-06-07,6417,EuroCOVIDhub-ensemble,3
+IT,2021-06-26,Cases,5194,Italy,2021-06-14,7507,EuroCOVIDhub-ensemble,2
+IT,2021-06-26,Cases,5194,Italy,2021-06-21,5925,EuroCOVIDhub-ensemble,1
+IT,2021-06-26,Cases,5194,Italy,2021-06-07,17098,EuroCOVIDhub-baseline,3
+IT,2021-06-26,Cases,5194,Italy,2021-06-14,13329,EuroCOVIDhub-baseline,2
+IT,2021-06-26,Cases,5194,Italy,2021-06-21,8613,EuroCOVIDhub-baseline,1
+IT,2021-06-26,Cases,5194,Italy,2021-06-07,5212,epiforecasts-EpiNow2,3
+IT,2021-06-26,Cases,5194,Italy,2021-06-14,7163,epiforecasts-EpiNow2,2
+IT,2021-06-26,Cases,5194,Italy,2021-06-21,5805,epiforecasts-EpiNow2,1
+IT,2021-06-26,Deaths,205,Italy,2021-06-07,182,EuroCOVIDhub-ensemble,3
+IT,2021-06-26,Deaths,205,Italy,2021-06-14,267,EuroCOVIDhub-ensemble,2
+IT,2021-06-26,Deaths,205,Italy,2021-06-21,206,EuroCOVIDhub-ensemble,1
+IT,2021-06-26,Deaths,205,Italy,2021-06-07,470,EuroCOVIDhub-baseline,3
+IT,2021-06-26,Deaths,205,Italy,2021-06-14,504,EuroCOVIDhub-baseline,2
+IT,2021-06-26,Deaths,205,Italy,2021-06-21,277,EuroCOVIDhub-baseline,1
+IT,2021-06-26,Deaths,205,Italy,2021-06-07,177,UMass-MechBayes,3
+IT,2021-06-26,Deaths,205,Italy,2021-06-14,213,UMass-MechBayes,2
+IT,2021-06-26,Deaths,205,Italy,2021-06-21,194,UMass-MechBayes,1
+IT,2021-06-26,Deaths,205,Italy,2021-06-07,180,epiforecasts-EpiNow2,3
+IT,2021-06-26,Deaths,205,Italy,2021-06-14,220,epiforecasts-EpiNow2,2
+IT,2021-06-26,Deaths,205,Italy,2021-06-21,203,epiforecasts-EpiNow2,1
+IT,2021-07-03,Cases,5222,Italy,2021-06-14,5693,EuroCOVIDhub-ensemble,3
+IT,2021-07-03,Cases,5222,Italy,2021-06-21,3876,EuroCOVIDhub-ensemble,2
+IT,2021-07-03,Cases,5222,Italy,2021-06-28,3909,EuroCOVIDhub-ensemble,1
+IT,2021-07-03,Cases,5222,Italy,2021-06-14,13329,EuroCOVIDhub-baseline,3
+IT,2021-07-03,Cases,5222,Italy,2021-06-21,8613,EuroCOVIDhub-baseline,2
+IT,2021-07-03,Cases,5222,Italy,2021-06-28,5194,EuroCOVIDhub-baseline,1
+IT,2021-07-03,Cases,5222,Italy,2021-06-14,5326,epiforecasts-EpiNow2,3
+IT,2021-07-03,Cases,5222,Italy,2021-06-21,3755,epiforecasts-EpiNow2,2
+IT,2021-07-03,Cases,5222,Italy,2021-06-28,3258,epiforecasts-EpiNow2,1
+IT,2021-07-03,Deaths,179,Italy,2021-06-14,217,EuroCOVIDhub-ensemble,3
+IT,2021-07-03,Deaths,179,Italy,2021-06-21,141,EuroCOVIDhub-ensemble,2
+IT,2021-07-03,Deaths,179,Italy,2021-06-28,153,EuroCOVIDhub-ensemble,1
+IT,2021-07-03,Deaths,179,Italy,2021-06-14,504,EuroCOVIDhub-baseline,3
+IT,2021-07-03,Deaths,179,Italy,2021-06-21,277,EuroCOVIDhub-baseline,2
+IT,2021-07-03,Deaths,179,Italy,2021-06-28,205,EuroCOVIDhub-baseline,1
+IT,2021-07-03,Deaths,179,Italy,2021-06-14,155,UMass-MechBayes,3
+IT,2021-07-03,Deaths,179,Italy,2021-06-21,132,UMass-MechBayes,2
+IT,2021-07-03,Deaths,179,Italy,2021-06-28,138,UMass-MechBayes,1
+IT,2021-07-03,Deaths,179,Italy,2021-06-14,165,epiforecasts-EpiNow2,3
+IT,2021-07-03,Deaths,179,Italy,2021-06-21,139,epiforecasts-EpiNow2,2
+IT,2021-07-03,Deaths,179,Italy,2021-06-28,146,epiforecasts-EpiNow2,1
+IT,2021-07-10,Cases,7374,Italy,2021-06-21,2641,EuroCOVIDhub-ensemble,3
+IT,2021-07-10,Cases,7374,Italy,2021-06-28,2654,EuroCOVIDhub-ensemble,2
+IT,2021-07-10,Cases,7374,Italy,2021-07-05,4360,EuroCOVIDhub-ensemble,1
+IT,2021-07-10,Cases,7374,Italy,2021-06-21,8613,EuroCOVIDhub-baseline,3
+IT,2021-07-10,Cases,7374,Italy,2021-06-28,5194,EuroCOVIDhub-baseline,2
+IT,2021-07-10,Cases,7374,Italy,2021-07-05,5222,EuroCOVIDhub-baseline,1
+IT,2021-07-10,Cases,7374,Italy,2021-06-21,2424,epiforecasts-EpiNow2,3
+IT,2021-07-10,Cases,7374,Italy,2021-06-28,1965,epiforecasts-EpiNow2,2
+IT,2021-07-10,Cases,7374,Italy,2021-07-05,5737,epiforecasts-EpiNow2,1
+IT,2021-07-10,Deaths,131,Italy,2021-06-21,97,EuroCOVIDhub-ensemble,3
+IT,2021-07-10,Deaths,131,Italy,2021-06-28,106,EuroCOVIDhub-ensemble,2
+IT,2021-07-10,Deaths,131,Italy,2021-07-05,123,EuroCOVIDhub-ensemble,1
+IT,2021-07-10,Deaths,131,Italy,2021-06-21,277,EuroCOVIDhub-baseline,3
+IT,2021-07-10,Deaths,131,Italy,2021-06-28,205,EuroCOVIDhub-baseline,2
+IT,2021-07-10,Deaths,131,Italy,2021-07-05,179,EuroCOVIDhub-baseline,1
+IT,2021-07-10,Deaths,131,Italy,2021-06-21,88,UMass-MechBayes,3
+IT,2021-07-10,Deaths,131,Italy,2021-06-28,95,UMass-MechBayes,2
+IT,2021-07-10,Deaths,131,Italy,2021-07-05,120,UMass-MechBayes,1
+IT,2021-07-10,Deaths,131,Italy,2021-06-21,94,epiforecasts-EpiNow2,3
+IT,2021-07-10,Deaths,131,Italy,2021-06-28,94,epiforecasts-EpiNow2,2
+IT,2021-07-10,Deaths,131,Italy,2021-07-05,113,epiforecasts-EpiNow2,1
+IT,2021-07-17,Cases,14447,Italy,2021-06-28,1903,EuroCOVIDhub-ensemble,3
+IT,2021-07-17,Cases,14447,Italy,2021-07-05,4046,EuroCOVIDhub-ensemble,2
+IT,2021-07-17,Cases,14447,Italy,2021-07-12,9560,EuroCOVIDhub-ensemble,1
+IT,2021-07-17,Cases,14447,Italy,2021-06-28,5194,EuroCOVIDhub-baseline,3
+IT,2021-07-17,Cases,14447,Italy,2021-07-05,5222,EuroCOVIDhub-baseline,2
+IT,2021-07-17,Cases,14447,Italy,2021-07-12,7374,EuroCOVIDhub-baseline,1
+IT,2021-07-17,Cases,14447,Italy,2021-06-28,1188,epiforecasts-EpiNow2,3
+IT,2021-07-17,Cases,14447,Italy,2021-07-05,7365,epiforecasts-EpiNow2,2
+IT,2021-07-17,Cases,14447,Italy,2021-07-12,14642,epiforecasts-EpiNow2,1
+IT,2021-07-17,Deaths,96,Italy,2021-06-28,73,EuroCOVIDhub-ensemble,3
+IT,2021-07-17,Deaths,96,Italy,2021-07-05,95,EuroCOVIDhub-ensemble,2
+IT,2021-07-17,Deaths,96,Italy,2021-07-12,105,EuroCOVIDhub-ensemble,1
+IT,2021-07-17,Deaths,96,Italy,2021-06-28,205,EuroCOVIDhub-baseline,3
+IT,2021-07-17,Deaths,96,Italy,2021-07-05,179,EuroCOVIDhub-baseline,2
+IT,2021-07-17,Deaths,96,Italy,2021-07-12,131,EuroCOVIDhub-baseline,1
+IT,2021-07-17,Deaths,96,Italy,2021-06-28,65,UMass-MechBayes,3
+IT,2021-07-17,Deaths,96,Italy,2021-07-05,96,UMass-MechBayes,2
+IT,2021-07-17,Deaths,96,Italy,2021-07-12,126,UMass-MechBayes,1
+IT,2021-07-17,Deaths,96,Italy,2021-06-28,58,epiforecasts-EpiNow2,3
+IT,2021-07-17,Deaths,96,Italy,2021-07-05,101,epiforecasts-EpiNow2,2
+IT,2021-07-17,Deaths,96,Italy,2021-07-12,125,epiforecasts-EpiNow2,1
+IT,2021-07-24,Cases,28341,Italy,2021-07-05,4133,EuroCOVIDhub-ensemble,3
+IT,2021-07-24,Cases,28341,Italy,2021-07-12,14194,EuroCOVIDhub-ensemble,2
+IT,2021-07-24,Cases,28341,Italy,2021-07-05,5222,EuroCOVIDhub-baseline,3
+IT,2021-07-24,Cases,28341,Italy,2021-07-12,7374,EuroCOVIDhub-baseline,2
+IT,2021-07-24,Cases,28341,Italy,2021-07-05,9683,epiforecasts-EpiNow2,3
+IT,2021-07-24,Cases,28341,Italy,2021-07-12,32174,epiforecasts-EpiNow2,2
+IT,2021-07-24,Deaths,78,Italy,2021-07-05,81,EuroCOVIDhub-ensemble,3
+IT,2021-07-24,Deaths,78,Italy,2021-07-12,108,EuroCOVIDhub-ensemble,2
+IT,2021-07-24,Deaths,78,Italy,2021-07-05,179,EuroCOVIDhub-baseline,3
+IT,2021-07-24,Deaths,78,Italy,2021-07-12,131,EuroCOVIDhub-baseline,2
+IT,2021-07-24,Deaths,78,Italy,2021-07-05,79,UMass-MechBayes,3
+IT,2021-07-24,Deaths,78,Italy,2021-07-12,124,UMass-MechBayes,2
+IT,2021-07-24,Deaths,78,Italy,2021-07-05,104,epiforecasts-EpiNow2,3
+IT,2021-07-24,Deaths,78,Italy,2021-07-12,186,epiforecasts-EpiNow2,2

@@ -16,11 +16,21 @@ almost line by line::
 
 from ._checks import ScoringutilsMessage
 from ._coverage import get_coverage
-from ._data import example_quantile, example_sample_continuous, example_sample_discrete
+from ._data import (
+    example_binary,
+    example_point,
+    example_quantile,
+    example_sample_continuous,
+    example_sample_discrete,
+)
 from ._forecast import (
     Forecast,
+    ForecastBinary,
+    ForecastPoint,
     ForecastQuantile,
     ForecastSample,
+    as_forecast_binary,
+    as_forecast_point,
     as_forecast_quantile,
     as_forecast_sample,
     assert_forecast,
@@ -30,12 +40,16 @@ from ._forecast import (
     get_forecast_unit,
     get_protected_columns,
     is_forecast,
+    is_forecast_binary,
+    is_forecast_point,
     is_forecast_quantile,
     is_forecast_sample,
     new_forecast,
     set_forecast_unit,
 )
 from ._interval import get_range_from_quantile, interval_score
+from ._metrics_binary import brier_score, logs_binary
+from ._metrics_point import ae_point, ape, se_point
 from ._metrics_quantile import (
     ae_median_quantile,
     bias_quantile,
@@ -76,11 +90,13 @@ from ._score import (
 )
 from ._summarise import summarise_scores, summarize_scores
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 UPSTREAM_VERSION = "2.3.0"
 
 __all__ = [
     "Forecast",
+    "ForecastBinary",
+    "ForecastPoint",
     "ForecastQuantile",
     "ForecastSample",
     "Scores",
@@ -89,6 +105,10 @@ __all__ = [
     "add_relative_skill",
     "ae_median_quantile",
     "ae_median_sample",
+    "ae_point",
+    "ape",
+    "as_forecast_binary",
+    "as_forecast_point",
     "as_forecast_quantile",
     "as_forecast_sample",
     "as_scores",
@@ -96,11 +116,14 @@ __all__ = [
     "assert_scores",
     "bias_quantile",
     "bias_sample",
+    "brier_score",
     "compare_scores",
     "crps_sample",
     "dispersion_quantile",
     "dispersion_sample",
     "dss_sample",
+    "example_binary",
+    "example_point",
     "example_quantile",
     "example_sample_continuous",
     "example_sample_discrete",
@@ -117,8 +140,11 @@ __all__ = [
     "interval_coverage",
     "interval_score",
     "is_forecast",
+    "is_forecast_binary",
+    "is_forecast_point",
     "is_forecast_quantile",
     "is_forecast_sample",
+    "logs_binary",
     "logs_sample",
     "mad_sample",
     "new_forecast",
@@ -129,6 +155,7 @@ __all__ = [
     "quantile_score",
     "score",
     "se_mean_sample",
+    "se_point",
     "select_metrics",
     "set_forecast_unit",
     "summarise_scores",

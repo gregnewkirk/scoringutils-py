@@ -1,8 +1,9 @@
 """score(), the Scores class and metric selection.
 
 Port of ``R/score.R``, ``R/class-scores.R``, ``R/metrics.R`` and the
-``score`` / ``get_metrics`` methods in ``R/class-forecast-quantile.R`` and
-``R/class-forecast-sample.R``.
+``score`` / ``get_metrics`` methods in ``R/class-forecast-quantile.R``,
+``R/class-forecast-sample.R``, ``R/class-forecast-point.R`` and
+``R/class-forecast-binary.R``.
 """
 
 from __future__ import annotations
@@ -16,12 +17,16 @@ import pandas as pd
 
 from ._forecast import (
     Forecast,
+    ForecastBinary,
+    ForecastPoint,
     ForecastQuantile,
     ForecastSample,
     _metrics_attr,
     assert_forecast,
     get_forecast_unit,
 )
+from ._metrics_binary import brier_score, logs_binary
+from ._metrics_point import ae_point, ape, se_point
 from ._metrics_quantile import (
     ae_median_quantile,
     bias_quantile,
@@ -143,6 +148,14 @@ def _default_metrics_sample() -> Metrics:
     }
 
 
+def _default_metrics_point() -> Metrics:
+    return {"ae_point": ae_point, "se_point": se_point, "ape": ape}
+
+
+def _default_metrics_binary() -> Metrics:
+    return {"brier_score": brier_score, "log_score": logs_binary}
+
+
 def select_metrics(
     metrics: Metrics,
     select: str | Sequence[str] | None = None,
@@ -187,6 +200,10 @@ def get_metrics(x, select=None, exclude=None, error: bool = False):
         return select_metrics(_default_metrics_quantile(), select, exclude)
     if isinstance(x, ForecastSample):
         return select_metrics(_default_metrics_sample(), select, exclude)
+    if isinstance(x, ForecastPoint):
+        return select_metrics(_default_metrics_point(), select, exclude)
+    if isinstance(x, ForecastBinary):
+        return select_metrics(_default_metrics_binary(), select, exclude)
     if isinstance(x, pd.DataFrame):
         return _get_metrics_scores(x, error=error)
     raise TypeError(f"No get_metrics() method for objects of type {type(x).__name__}.")
@@ -267,6 +284,8 @@ def score(forecast, metrics: Metrics | None = None) -> Scores:
         return _score_quantile(forecast, metrics)
     if isinstance(forecast, ForecastSample):
         return _score_sample(forecast, metrics)
+    if isinstance(forecast, (ForecastPoint, ForecastBinary)):
+        return _score_one_row_per_forecast(forecast, metrics)
     raise TypeError(
         "The input needs to be a valid forecast object. Please convert to a "
         "`forecast` object first by calling the appropriate "
@@ -335,3 +354,16 @@ def _score_sample(forecast: ForecastSample, metrics) -> Scores:
         frame = first.loc[ids, forecast_unit].reset_index(drop=True)
         parts.append(_apply_metrics(frame, metrics, obs, pred))
     return _finalise(parts, metrics)
+
+
+def _score_one_row_per_forecast(forecast: Forecast, metrics) -> Scores:
+    # point and binary forecasts have one row per forecast, so each metric is
+    # applied to whole columns at once and rows keep their input order
+    df, metrics, _ = _prepare(forecast, metrics)
+    if isinstance(forecast, ForecastBinary):
+        observed = pd.Categorical(df["observed"])
+    else:
+        observed = df["observed"].to_numpy()
+    predicted = df["predicted"].to_numpy()
+    frame = df.drop(columns=["predicted", "observed"])
+    return _finalise([_apply_metrics(frame, metrics, observed, predicted)], metrics)

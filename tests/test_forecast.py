@@ -2,9 +2,10 @@
 test-class-forecast-quantile.R, test-class-forecast-sample.R,
 test-forecast-unit.R and test-get-duplicate-forecasts.R (2.3.0).
 
-Not ported: binary / point / nominal / ordinal / multivariate cases (not in
-v1), R print snapshots and data.table ``:=`` autoprint behaviour (no Python
-equivalent), and ``[.forecast`` re-validation (see docs/DESIGN.md section 4).
+Binary and point cases are in test_forecast_point_binary.py. Not ported:
+nominal / ordinal / multivariate cases (not ported yet), R print snapshots
+and data.table ``:=`` autoprint behaviour (no Python equivalent), and
+``[.forecast`` re-validation (see docs/DESIGN.md section 4).
 """
 
 from __future__ import annotations

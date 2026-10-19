@@ -11,6 +11,8 @@
 #   src/scoringutils_py/data/*.csv.gz   upstream example datasets
 #   tests/fixtures/*.csv                data-frame level expected outputs
 #   tests/fixtures/metric_cases.json    vector/matrix level expected outputs
+#   tests/fixtures/metric_cases_point_binary.json
+#                                       point and binary metric cases
 #   tests/fixtures/versions.json        R and package versions used
 
 suppressPackageStartupMessages({
@@ -76,6 +78,8 @@ write_fixture_csv(
   example_sample_discrete,
   file.path(data_dir, "example_sample_discrete.csv.gz")
 )
+write_fixture_csv(example_point, file.path(data_dir, "example_point.csv.gz"))
+write_fixture_csv(example_binary, file.path(data_dir, "example_binary.csv.gz"))
 
 # ---------------------------------------------------------------------------
 # 2. score()
@@ -431,7 +435,103 @@ write_json(
 )
 
 # ---------------------------------------------------------------------------
-# 8. versions
+# 8. point and binary forecasts
+# ---------------------------------------------------------------------------
+
+scores_point <- suppressMessages(score(as_forecast_point(example_point)))
+scores_binary <- suppressMessages(score(as_forecast_binary(example_binary)))
+write_fixture_csv(scores_point, fx("scores_point.csv"))
+write_fixture_csv(scores_binary, fx("scores_binary.csv"))
+
+# quantile -> point: the median becomes the point forecast
+quantile_to_point <- as_forecast_point(as_forecast_quantile(na.omit(example_quantile)))
+write_fixture_csv(quantile_to_point, fx("quantile_to_point.csv"))
+write_fixture_csv(score(quantile_to_point), fx("scores_quantile_to_point.csv"))
+
+write_fixture_csv(
+  summarise_scores(scores_point, by = c("model", "target_type")),
+  fx("summarise_point_model_target.csv")
+)
+write_fixture_csv(
+  summarise_scores(scores_binary, by = "model"),
+  fx("summarise_binary_model.csv")
+)
+write_fixture_csv(
+  summarise_scores(scores_binary, by = c("model", "target_type")),
+  fx("summarise_binary_model_target.csv")
+)
+
+write_fixture_csv(
+  get_pairwise_comparisons(scores_binary),
+  fx("pairwise_binary.csv")
+)
+write_fixture_csv(add_relative_skill(scores_binary), fx("relskill_binary.csv"))
+rel_binary <- add_relative_skill(
+  scores_binary, by = "target_type", baseline = "EuroCOVIDhub-baseline"
+)
+write_fixture_csv(rel_binary, fx("relskill_binary_by_target_baseline.csv"))
+write_fixture_csv(
+  summarise_scores(rel_binary, by = c("model", "target_type")),
+  fx("relskill_binary_by_target_baseline_summary.csv")
+)
+write_fixture_csv(
+  get_pairwise_comparisons(scores_point, metric = "ae_point", by = "target_type"),
+  fx("pairwise_point_ae_by_target.csv")
+)
+rel_point <- add_relative_skill(
+  scores_point, metric = "se_point", by = "target_type",
+  baseline = "EuroCOVIDhub-baseline"
+)
+write_fixture_csv(rel_point, fx("relskill_point_se_by_target_baseline.csv"))
+
+# vector level cases. Factors do not survive JSON, so `observed` is stored as
+# character with its levels next to it.
+pb_cases <- list()
+point_metrics <- get_metrics(example_point)
+add_pb_case <- function(id, fn, observed, predicted) {
+  f <- if (fn %in% names(point_metrics)) point_metrics[[fn]] else get(fn)
+  result <- suppressWarnings(f(observed, predicted))
+  is_factor <- is.factor(observed)
+  pb_cases[[length(pb_cases) + 1]] <<- list(
+    id = id, fn = fn,
+    observed = if (is_factor) as.character(observed) else observed,
+    levels = if (is_factor) levels(observed) else NULL,
+    predicted = predicted,
+    result = result
+  )
+}
+set.seed(31)
+obs_pt <- c(1, -15, 22, 0.5, 5.5, 3e5)
+pred_pt <- c(5, 6, 7, 0, 5.5, 2.9e5)
+for (fn in names(point_metrics)) {
+  add_pb_case(paste0(fn, "_basic"), fn, obs_pt, pred_pt)
+  add_pb_case(paste0(fn, "_scalar_observed"), fn, 2, pred_pt)
+  add_pb_case(paste0(fn, "_random"), fn, rnorm(50, 10, 5), rnorm(50, 10, 5))
+}
+add_pb_case("ape_zero_observed", "ape", c(0, 0, 1), c(1, 0, 1))
+
+obs_bin <- factor(rbinom(50, size = 1, prob = 0.4))
+pred_bin <- runif(50)
+for (fn in c("brier_score", "logs_binary")) {
+  add_pb_case(paste0(fn, "_random"), fn, obs_bin, pred_bin)
+  add_pb_case(paste0(fn, "_scalar_observed"), fn,
+              factor(1, levels = c(0, 1)), pred_bin[1:10])
+  add_pb_case(paste0(fn, "_scalar_predicted"), fn, obs_bin, 0.2)
+  add_pb_case(paste0(fn, "_edges"), fn,
+              factor(c(0, 1, 0, 1, 1), levels = c(0, 1)), c(0, 1, 1, 0, 0.5))
+  add_pb_case(paste0(fn, "_reversed_levels"), fn,
+              factor(c(0, 1, 1, 0), levels = c("1", "0")), c(0.1, 0.9, 0.8, 0.2))
+  add_pb_case(paste0(fn, "_letters"), fn,
+              factor(c("a", "b", "b", "a")), c(0.3, 0.7, 0.6, 0.4))
+}
+
+write_json(
+  pb_cases, fx("metric_cases_point_binary.json"),
+  digits = I(17), auto_unbox = TRUE, na = "string", pretty = FALSE
+)
+
+# ---------------------------------------------------------------------------
+# 9. versions
 # ---------------------------------------------------------------------------
 
 write_json(

@@ -13,9 +13,10 @@ Goal: give Python users the scoringutils workflow (validate forecasts, score
 them, summarise, compare models) with numbers that match R scoringutils 2.3.0
 to about 1e-10.
 
-v1 covers quantile and sample forecasts only.
+v1 (0.1.0) covers quantile and sample forecasts. 0.2.0 adds point and
+binary forecasts (section 11).
 
-Not in v1: binary, point, nominal, ordinal and multivariate forecasts; plots;
+Not yet ported: nominal, ordinal and multivariate forecasts; plots;
 PIT histograms; `transform_forecasts()`; `get_forecast_counts()`;
 `get_correlations()`; missing-score imputation; `filter_scores()`. These are
 listed as "not yet" in the README parity table.
@@ -46,13 +47,16 @@ scoringutils-py/
     _forecast.py           forecast classes, as_forecast_*, validation, forecast unit, duplicates
     _metrics_quantile.py   wis, components, bias, coverage, ae_median, quantile_score
     _metrics_sample.py     crps, components, bias, dss, log score, mad, ae_median, se_mean
+    _metrics_point.py      ae_point, se_point, ape (0.2.0)
+    _metrics_binary.py     brier_score, logs_binary (0.2.0)
     _interval.py           quantile <-> interval helpers (internal)
     _score.py              score(), get_metrics(), select_metrics(), Scores class
     _summarise.py          summarise_scores()
     _pairwise.py           get_pairwise_comparisons(), add_relative_skill(), R-exact Wilcoxon + Holm
     _coverage.py           get_coverage()
     _rcompat.py            small exact ports of R behaviour (get_type, bw.nrd, mad)
-    data/                  example_quantile, example_sample_continuous, example_sample_discrete (csv.gz)
+    data/                  example_quantile, example_sample_continuous, example_sample_discrete,
+                           example_point, example_binary (csv.gz)
   tests/
     fixtures/              expected outputs written by R (committed)
     test_*.py              parity tests + ported testthat cases
@@ -109,6 +113,10 @@ translates almost line by line. Arguments keep R names and defaults.
 | `as_forecast_quantile(data, forecast_unit, observed, predicted, quantile_level)` | same | ported |
 | `as_forecast_sample(data, forecast_unit, observed, predicted, sample_id)` | same | ported |
 | `as_forecast_quantile(<forecast_sample>, probs, type)` | `as_forecast_quantile(sample_fc, probs=..., type=7)` | ported (R quantile types 1 to 9 map to numpy methods) |
+| `as_forecast_point(data, forecast_unit, observed, predicted)` | same | ported in 0.2.0 |
+| `as_forecast_point(<forecast_quantile>)` | `as_forecast_point(quantile_fc)` | ported in 0.2.0 (keeps the median) |
+| `as_forecast_binary(data, forecast_unit, observed, predicted)` | same | ported in 0.2.0 (`observed` is a pandas Categorical) |
+| `is_forecast_point()`, `is_forecast_binary()` | same | ported in 0.2.0 |
 | `assert_forecast()` | same | ported |
 | `is_forecast()`, `is_forecast_quantile()`, `is_forecast_sample()` | same | ported |
 | `get_forecast_type()` | same | ported |
@@ -153,6 +161,8 @@ Default metrics, same names and order as R:
   `interval_coverage_50`, `interval_coverage_90`, `ae_median`
 - sample: `bias`, `dss`, `crps`, `overprediction`, `underprediction`,
   `dispersion`, `log_score`, `mad`, `ae_median`, `se_mean`
+- point (0.2.0): `ae_point`, `se_point`, `ape`
+- binary (0.2.0): `brier_score`, `log_score`
 
 ### Metric functions (vector / matrix level)
 
@@ -171,6 +181,8 @@ Default metrics, same names and order as R:
 | `logs_sample` | same | scoringrules `logs_ensemble` with R's `bw.nrd` bandwidth | ported |
 | `mad_sample` | same | own (R `stats::mad`) | ported |
 | `ae_median_sample`, `se_mean_sample` | same | own | ported |
+| unnamed `ae_point`, `se_point`, `ape` in `get_metrics.forecast_point()` | `ae_point`, `se_point`, `ape` | own (one line each) | ported in 0.2.0 |
+| `brier_score`, `logs_binary` | same | own | ported in 0.2.0 |
 
 ### Summaries and comparisons
 
@@ -291,3 +303,44 @@ Things learned while building v1 that change or sharpen the plan above.
 7. R's `summarise_scores(fun = median)` errors on the logical coverage
    columns when a group has an odd number of rows. The fixture uses
    `function(x) median(as.numeric(x))`; Python converts booleans first.
+
+## 11. Point and binary forecasts (0.2.0, 2026-10-19)
+
+Port of `R/class-forecast-point.R`, `R/class-forecast-binary.R`,
+`R/metrics-point.R`, `R/metrics-binary.R` and
+`as_forecast_point.forecast_quantile()`. Tested against R fixtures in the
+same way as v1 (13 more data-frame comparisons, 22 more vector cases) plus
+ported testthat cases from `test-class-forecast-point.R`,
+`test-class-forecast-binary.R`, `test-metrics-point.R` and
+`test-metrics-binary.R`.
+
+1. Classes. `ForecastPoint` and `ForecastBinary` follow the existing
+   pattern: DataFrame subclasses with no type-specific ID columns, so every
+   row is one forecast. `score()` applies each metric to whole columns at
+   once and keeps the input row order, as R does.
+2. Factors. R wants the binary outcome as a factor with two levels and
+   treats `predicted` as the probability of the highest level. The closest
+   pandas type is `Categorical`: its category order plays the role of the
+   level order, and the second category is the "highest" one. Anything
+   else (integers, booleans, strings) is refused, as R refuses non-factors,
+   and the error says how to convert. A plain 0 / 1 column would have been
+   friendlier, but it would blur the line R draws on purpose between
+   binary and point forecasts (both have a numeric `predicted`). R 2.3.0's
+   warning for levels in a counterintuitive order (`"1"` before `"0"`,
+   `TRUE` before `FALSE`) is ported; Python booleans count as
+   `TRUE` / `FALSE`.
+3. Point metrics. These look like they come from the Metrics package
+   (`ae`, `se`, `ape`), but in scoringutils 2.3.0 the defaults are three
+   one-line unnamed functions inside `get_metrics()`, and Metrics is only
+   used in a test to check them. The port gives them the R metric
+   names as public functions. R's `ape` divides by zero silently (`Inf`),
+   so numpy's divide warning is switched off to match.
+4. Quantile to point. `as_forecast_point(<ForecastQuantile>)` keeps the rows
+   with quantile level exactly 0.5, drops `quantile_level`, and, like R,
+   does not validate the result. It errors if no forecast has a median.
+5. Example data. `example_point` and `example_binary` are exported by
+   `r/generate_fixtures.R` like the other three. In `example_binary`,
+   `observed` is read back as a Categorical with categories `"0"` and
+   `"1"` (strings, as R's levels are). Regenerating all fixtures with the
+   extended script left every v1 fixture byte-identical.
+6. Version. The package version moves to 0.2.0.
