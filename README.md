@@ -1,5 +1,10 @@
 # scoringutils-py
 
+[![tests](https://github.com/gregnewkirk/scoringutils-py/actions/workflows/tests.yml/badge.svg)](https://github.com/gregnewkirk/scoringutils-py/actions/workflows/tests.yml)
+[![release](https://img.shields.io/github/v/release/gregnewkirk/scoringutils-py)](https://github.com/gregnewkirk/scoringutils-py/releases)
+
+What changed in each version: [CHANGELOG.md](CHANGELOG.md). How to contribute and release: [CONTRIBUTING.md](CONTRIBUTING.md).
+
 An unofficial Python port of the R package
 [scoringutils](https://github.com/epiforecasts/scoringutils) for evaluating
 probabilistic forecasts. Version 0.2.0 covers quantile, sample, point and
