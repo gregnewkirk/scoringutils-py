@@ -12,7 +12,9 @@ permissions:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    # Only when Dependabot itself pushed. If a person rebases the branch, the
+    # commit is no longer Dependabot's and the metadata step would refuse it.
+    if: github.actor == 'dependabot[bot]'
     steps:
       - id: metadata
         uses: dependabot/fetch-metadata@v3
