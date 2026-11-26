@@ -7,3 +7,5 @@ dist/
 build/
 *.egg-info/
 .Rhistory
+watch-report.md
+watch-overrides.txt

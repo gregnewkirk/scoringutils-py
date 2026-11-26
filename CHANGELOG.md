@@ -17,6 +17,13 @@ Every release lists the upstream scoringutils version it was checked against.
   in `pyproject.toml`, builds the sdist and wheel, and publishes a GitHub
   Release whose notes are that version's section of this file.
 - CI now also builds the package on every push and pull request.
+- Weekly `upstream-watch` workflow: compares the scoringutils version on CRAN
+  with the one this port was checked against, checks each dependency's newest
+  release against the allowed range, and runs the tests on the newest
+  dependencies. Findings go into one issue labelled `upstream-watch`, which
+  closes itself when resolved.
+- Dependabot patch and minor updates now merge themselves once the required
+  checks pass. Major updates still wait for review.
 
 ## [0.2.0] - 2026-10-19
 

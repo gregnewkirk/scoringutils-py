@@ -40,6 +40,17 @@ them, and a pull request that changes a fixture must say why.
 6. Open a pull request. CI must pass on every supported Python version before
    it is merged. Merge with **squash**, keeping the Conventional Commit title.
 
+## Upkeep
+
+Two workflows keep the port current between changes:
+
+- `upstream-watch` runs every Monday. It opens or updates one issue labelled
+  `upstream-watch` when scoringutils has a new CRAN release, when a dependency
+  releases a version outside the range in `pyproject.toml`, or when the tests
+  fail on the newest dependencies. It commits nothing.
+- `dependabot-auto-merge` merges Dependabot's patch and minor updates once CI
+  passes. Major updates are left for review.
+
 ## Releasing
 
 Versions follow [Semantic Versioning](https://semver.org/). Before 1.0.0, a

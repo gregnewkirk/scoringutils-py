@@ -1,0 +1,92 @@
+name: upstream-watch
+
+# Once a week: has scoringutils released a new version, has a dependency
+# released something outside the range we allow, and do the tests still pass
+# on the newest dependencies? Findings go into one open issue labelled
+# "upstream-watch". Nothing is committed and no issue is opened when nothing
+# has changed.
+
+on:
+  schedule:
+    - cron: "17 14 * * 1" # Mondays 14:17 UTC
+  workflow_dispatch:
+    inputs:
+      ported_version:
+        description: Pretend the port was checked against this scoringutils version (for testing the alert)
+        required: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Compare with CRAN and PyPI
+        id: versions
+        env:
+          PORTED_VERSION: ${{ inputs.ported_version }}
+        run: uv run --no-project -p 3.13 --with packaging python scripts/upstream_watch.py
+
+      - name: Test on the newest dependencies inside the allowed ranges
+        id: upgraded
+        continue-on-error: true
+        run: |
+          uv sync -p 3.13 --upgrade
+          uv run pytest -q
+
+      - name: Test on dependency releases outside the allowed ranges
+        id: capped
+        if: steps.versions.outputs.drift == 'true'
+        continue-on-error: true
+        run: |
+          test -s watch-overrides.txt || exit 0
+          uv venv /tmp/capped -p 3.13
+          uv pip install --python /tmp/capped/bin/python . pytest --override watch-overrides.txt
+          /tmp/capped/bin/python -m pytest -q -p no:cacheprovider
+
+      - name: Write the report
+        id: report
+        run: |
+          if [ "${{ steps.upgraded.outcome }}" = "failure" ]; then
+            echo "- **Tests fail on the newest dependencies inside the allowed ranges** (\`uv sync --upgrade\`). See the run log." >> watch-report.md
+          fi
+          if [ -s watch-overrides.txt ]; then
+            if [ "${{ steps.capped.outcome }}" = "success" ]; then
+              echo "- Tests **pass** with $(paste -sd, watch-overrides.txt | sed 's/,/, /g'), so the upper bound can be raised." >> watch-report.md
+            else
+              echo "- Tests **fail** with $(paste -sd, watch-overrides.txt | sed 's/,/, /g'). See the run log before raising the upper bound." >> watch-report.md
+            fi
+          fi
+          if [ -s watch-report.md ]; then
+            echo "drift=true" >> "$GITHUB_OUTPUT"
+            printf '\nFrom the weekly [upstream-watch run](%s). This issue is updated in place and closed automatically once everything is back in step.\n' \
+              "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> watch-report.md
+          else
+            echo "drift=false" >> "$GITHUB_OUTPUT"
+          fi
+          cat watch-report.md
+
+      - name: Open, update or close the tracking issue
+        run: |
+          gh label create upstream-watch --color 0E8A16 \
+            --description "Opened by the weekly upstream-watch workflow" 2>/dev/null || true
+          number=$(gh issue list --label upstream-watch --state open --json number --jq '.[0].number // empty')
+          if [ "${{ steps.report.outputs.drift }}" = "true" ]; then
+            if [ -n "$number" ]; then
+              gh issue edit "$number" --body-file watch-report.md
+            else
+              gh issue create --label upstream-watch \
+                --title "Upstream or dependency release needs attention" \
+                --body-file watch-report.md
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --comment "Everything is back in step as of the latest upstream-watch run."
+          fi
