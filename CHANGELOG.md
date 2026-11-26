@@ -25,6 +25,10 @@ Every release lists the upstream scoringutils version it was checked against.
 - Dependabot patch and minor updates now merge themselves once the required
   checks pass. Major updates still wait for review.
 
+### Changed
+
+- Allow scoringrules 0.12 (`scoringrules>=0.9,<0.13`). All tests pass on 0.12.0.
+
 ## [0.2.0] - 2026-10-19
 
 Checked against R scoringutils 2.3.0 (CRAN, 2026-09-27) and scoringRules 1.1.3.

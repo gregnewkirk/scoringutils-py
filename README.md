@@ -45,7 +45,7 @@ pip install .
 ```
 
 Requires Python 3.10 or later, numpy, pandas 2, scipy and scoringrules
-(0.9 to 0.11).
+(0.9 to 0.12).
 
 ## Worked example
 
