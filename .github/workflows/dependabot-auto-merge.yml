@@ -21,7 +21,7 @@ jobs:
         with:
           github-token: ${{ github.token }}
       - name: Merge when checks pass
-        if: steps.metadata.outputs.update-type != 'version-update:semver-major'
+        if: contains(fromJSON('["version-update:semver-patch", "version-update:semver-minor"]'), steps.metadata.outputs.update-type)
         env:
           GH_TOKEN: ${{ github.token }}
           PR_URL: ${{ github.event.pull_request.html_url }}
